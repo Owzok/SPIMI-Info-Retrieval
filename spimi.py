@@ -20,7 +20,7 @@ class SPIMI:
         idf = math.log10(1 + (total_documents / document_frequency))
 
         if idf == 0:
-            print(total_documents, document_frequency)
+            print("\tFound ZERO:", total_documents, document_frequency)
 
         return tf * idf
 
@@ -36,7 +36,9 @@ class SPIMI:
         spimi_index.close()
 
     def search_query(self, query, documents, top_k):
-        self.index_documents(documents)
+        if not os.path.isfile('spimi_inverted_index.txt'):
+            self.index_documents(documents)
+            
         self.documents = documents
         query_terms = preprocess({'text': query})
 
@@ -58,26 +60,23 @@ class SPIMI:
             lst = []
             i = 0
             #print(inverted_index[term])
-            for x in range(5):
+            for x in range(get_n_docs()):
                 found = False
                 if i != len(inverted_index[term]) and inverted_index[term][i][0] == x:
-                    print("found",term,"in",x)
                     found = True
                     lst.append(inverted_index[term][i])
                     i += 1
                     #print("found", x, i, len(inverted_index[term]))
                     
                 if not found:
-                    print("not found",term,"in",x)
                     lst.append((x, 0.0))
                     #print("not found", x, i, len(inverted_index[term]))
 
-            for x in range(5):
+            for x in range(get_n_docs()):
                 weights[x] += lst[x][1] * tf_idf
             
         sorted_results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
         sorted_results = sorted_results[:int(top_k)]
-        print(lst)
         return sorted_results
 
     def index_documents(self, documents):
