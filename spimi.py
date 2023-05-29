@@ -13,6 +13,9 @@ class SPIMI:
 
     # freq: N word is repeated. doc_freq: in how many doc appears. Total: N of docs
     def calculate_tf_idf(self, frequency, document_frequency, total_documents):
+        if document_frequency == 0:
+            return 0
+            
         tf = 1 + math.log10(frequency)
         idf = math.log10(1 + (total_documents / document_frequency))
 
@@ -32,17 +35,13 @@ class SPIMI:
         
         spimi_index.close()
 
-    def search_query(self, query, documents):
+    def search_query(self, query, documents, top_k):
         self.index_documents(documents)
         self.documents = documents
         query_terms = preprocess({'text': query})
 
-        start_time = time.time()
         inverted_index = generate_index()
-        line1_time = time.time()
-        print(f"Index created in {line1_time - start_time}seconds")
 
-        start_time = time.time()
         term_frequency = defaultdict(int)
 
         for term in query_terms:
@@ -74,9 +73,9 @@ class SPIMI:
                 weights[x] += lst[x][1] * tf_idf
             
         sorted_results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
-        line1_time = time.time()
+        sorted_results = sorted_results[:int(top_k)]
 
-        return sorted_results, (line1_time - start_time)
+        return sorted_results
 
     def index_documents(self, documents):
         self.documents = documents

@@ -18,12 +18,11 @@ while x != 0 and x != 1:
         spimi.index_documents(documents)
     elif x == 1:
         query = str(input("Enter the query: "))
-        results, m_time = spimi.search_query(query, documents)
+        start_time = time.time()
+        results = spimi.search_query(query, documents, 4)
 
         print(f"\nSearch Results of '{query}':")
-        for i in range(len(documents)):
-            if i == results[0][0]:
-                print(f"\n>> Found in: {m_time} seconds")
+        print("in", time.time()-start_time, "s")
 
         for doc_id, score in results:
             print(f"Document ID: {doc_id}, Score: {score}")
