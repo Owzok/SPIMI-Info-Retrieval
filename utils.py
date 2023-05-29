@@ -3,6 +3,9 @@ import math, os, sys, json
 from nltk.stem.snowball import SnowballStemmer
 import time
 
+def get_n_docs():
+    return len(get_files_from_folder('./documents/'))
+
 def preprocess(document):
     with open("stop_words_spanish.txt", "rt") as f:
         stoplist = {word.strip() for word in f}
@@ -86,6 +89,14 @@ def get_files_from_folder(folder_path):
         if os.path.isfile(file_path):
             files.append(file_path)
     return files
+
+def count_terms():
+    count = 0
+    with open("spimi_inverted_index.txt", 'r') as file:
+        for line in file:
+            if line.strip():
+                count += 1
+    return count
 
 # ----- MERGE ------
 

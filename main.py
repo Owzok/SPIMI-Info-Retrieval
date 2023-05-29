@@ -19,7 +19,7 @@ while x != 0 and x != 1:
     elif x == 1:
         query = str(input("Enter the query: "))
         start_time = time.time()
-        results = spimi.search_query(query, documents, 4)
+        results = spimi.search_query(query, documents, 100)
 
         print(f"\nSearch Results of '{query}':")
         print("in", time.time()-start_time, "s")
