@@ -15,7 +15,7 @@ class SPIMI:
     def calculate_tf_idf(self, frequency, document_frequency, total_documents):
         if document_frequency == 0:
             return 0
-            
+
         tf = 1 + math.log10(frequency)
         idf = math.log10(1 + (total_documents / document_frequency))
 
@@ -52,7 +52,8 @@ class SPIMI:
 
         for term, frequency in term_frequency.items():
             #max_frequency = max(term_frequency.values())  # Calculate max frequency for the current term
-            tf_idf = self.calculate_tf_idf(frequency, self.document_frequency[term], len(self.documents))
+            
+            tf_idf = frequency/len(self.documents)
             x = tf_idf
             lst = []
             i = 0
@@ -60,12 +61,14 @@ class SPIMI:
             for x in range(5):
                 found = False
                 if i != len(inverted_index[term]) and inverted_index[term][i][0] == x:
+                    print("found",term,"in",x)
                     found = True
                     lst.append(inverted_index[term][i])
                     i += 1
                     #print("found", x, i, len(inverted_index[term]))
                     
                 if not found:
+                    print("not found",term,"in",x)
                     lst.append((x, 0.0))
                     #print("not found", x, i, len(inverted_index[term]))
 
@@ -74,17 +77,12 @@ class SPIMI:
             
         sorted_results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
         sorted_results = sorted_results[:int(top_k)]
-
+        print(lst)
         return sorted_results
 
     def index_documents(self, documents):
         self.documents = documents
         self.total_documents = len(documents)
-
-        for doc_id, document in enumerate(documents):       # Build document frequency dict O(dn)
-            words = set(preprocess(document))
-            for term in words:
-                self.document_frequency[term] += 1
 
         for doc_id, document in enumerate(documents):       
             terms = preprocess(document)
@@ -96,23 +94,25 @@ class SPIMI:
             for term, frequency in term_frequency.items():
                 if sys.getsizeof(self.inverted_index) > self.BLOCK_SIZE:
                     self.blocks.append(dict(self.inverted_index))
-                    write_to_disk(self.inverted_index, self.document_length, f"./blocks/block-{self.block}.txt")
+                    write_to_disk(self.inverted_index, f"./blocks/block-{self.block}.txt")
                     self.inverted_index.clear()
                     self.block += 1
-                tf_idf = self.calculate_tf_idf(frequency, self.document_frequency[term], self.total_documents)
-                self.inverted_index[term].append((doc_id, tf_idf))
-                self.document_length[doc_id] += tf_idf ** 2
+                #tf_idf = self.calculate_tf_idf(frequency, self.document_frequency[term], self.total_documents)
+                self.inverted_index[term].append((doc_id, frequency))
+                #self.document_length[doc_id] += tf_idf ** 2
             
             term_frequency.clear()
 
-            for doc_id, length in self.document_length.items():
-                self.document_length[doc_id] = math.sqrt(length)
+            #for doc_id, length in self.document_length.items():
+            #    self.document_length[doc_id] = math.sqrt(length)
 
         if self.inverted_index:                             # Write another block if inverted index isn't empty
-            write_to_disk(self.inverted_index, self.document_length, f"./blocks/block-{self.block}.txt")
+            write_to_disk(self.inverted_index, f"./blocks/block-{self.block}.txt")
             self.blocks.append(dict(self.inverted_index))
             self.inverted_index.clear()
-            
-        self.merge()
+        
+        merged_block = merge_all_blocks(get_files_from_folder("./blocks/"))
+        write_to_disk_with_tfidf(merged_block, "spimi_inverted_index.txt", 6)
 
-        return self.document_length
+        #return self.document_length
+        return

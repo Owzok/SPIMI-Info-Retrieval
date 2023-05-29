@@ -1,11 +1,7 @@
-from collections import defaultdict
-import math, os, sys
+from collections import defaultdict, OrderedDict
+import math, os, sys, json
 from nltk.stem.snowball import SnowballStemmer
 import time
-
-def get_n_block():
-    path = "./blocks/"
-    return len(os.listdir(path))
 
 def preprocess(document):
     with open("stop_words_spanish.txt", "rt") as f:
@@ -22,17 +18,30 @@ def preprocess(document):
             words.append(word)
     return words
 
-def write_to_disk(inverted_index, document_lengths, filename):
+def calculate_tf_idf(frequency, document_frequency, total_documents):
+    if document_frequency == 0:
+        return 0
 
-    #print(sys.getsizeof(inverted_index),"bytes!")
-    #print(inverted_index,end="\n\n")
+    tf = 1 + math.log10(frequency)
+    idf = math.log10(1 + (total_documents / document_frequency))
 
+    return tf * idf
+
+def write_to_disk_with_tfidf(inverted_index, filename, total_documents):
     with open(filename, 'w') as file:
         for term, postings in inverted_index.items():
-            file.write(f"{term}: {postings}\n")
-        file.write('\n')
-        for doc_id, length in document_lengths.items():
-            file.write(f"{doc_id}: {length}\n")
+            document_frequency = len(postings)
+            file.write(f"{term}: ")
+            for posting in postings:
+                document_id = posting[0]
+                term_frequency = posting[1]
+                tfidf = calculate_tf_idf(term_frequency, document_frequency, total_documents)
+                file.write(f"[{document_id}, {tfidf}], ")
+            file.write("\n")
+
+def write_to_disk(inverted_index, filename):
+    with open(filename, 'w') as file:
+        json.dump(inverted_index, file, indent=4)
 
 def generate_index():
     inverted_index = defaultdict(list)
@@ -42,14 +51,14 @@ def generate_index():
             if not line:
                 continue
             
-            term, doc_weights = line.split(' ', 1)
-            doc_weights = doc_weights.split()
-
+            term, doc_weights = line.split(': ', 1)
+            doc_weights = doc_weights.strip('[]').split('], [')
+            
             for doc_w in doc_weights:
-                doc_id, weight = doc_w.split(':')
+                doc_id, weight = doc_w.split(', ')
                 doc_id = int(doc_id)
-                weight = float(weight)
-                inverted_index[term].append((doc_id, weight))
+                weight = float(weight.split('],')[0])
+                inverted_index[term].append([doc_id, weight])
     return inverted_index
 
 def read_txt_files(folder_path):
@@ -69,3 +78,53 @@ def read_txt_files(folder_path):
         data_list.append(data)
 
     return data_list
+
+def get_files_from_folder(folder_path):
+    files = []
+    for file_name in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, file_name)
+        if os.path.isfile(file_path):
+            files.append(file_path)
+    return files
+
+# ----- MERGE ------
+
+def merge_blocks(block1, block2):
+    """
+    Merge two blocks by merging the lists for duplicate words
+    """
+    merged_block = OrderedDict()
+    for block in [block1, block2]:
+        for word, postings in block.items():
+            if word in merged_block:
+                # Check if the first value is the same
+                if merged_block[word][0][0] == postings[0][0]:
+                    merged_block[word][0] = (merged_block[word][0][0], merged_block[word][0][1] + postings[0][1])
+                else:
+                    merged_block[word] += postings
+            else:
+                merged_block[word] = postings
+    sorted_block = OrderedDict(sorted(merged_block.items(), key=lambda x: x[0]))
+    return sorted_block
+
+def merge_all_blocks(file_paths):
+    """
+    Merge all blocks from separate text files
+    """
+    blocks = []
+    for file_path in file_paths:
+        with open(file_path, 'r') as file:
+            block = json.load(file)  # Load the file content as a JSON object
+            blocks.append(block)
+
+    while len(blocks) > 1:
+        merged_blocks = []
+        for i in range(0, len(blocks), 2):
+            if i + 1 < len(blocks):
+                merged = merge_blocks(blocks[i], blocks[i + 1])
+                merged_blocks.append(merged)
+            else:
+                merged_blocks.append(blocks[i])
+        blocks = merged_blocks
+
+    return blocks[0]
