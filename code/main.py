@@ -15,7 +15,6 @@ def CLI():
     while x != 0 and x != 1:
         x = int(input())
         if x == 0:
-            print("gaa")
             spimi.index_documents(documents)
         elif x == 1:
             query = str(input("Enter the query: "))
