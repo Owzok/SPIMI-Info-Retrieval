@@ -1,5 +1,9 @@
 from collections import defaultdict, OrderedDict
-import math, os, sys, json
+import math
+import os
+import sys
+import json
+import time
 from nltk.stem.snowball import SnowballStemmer
 import time
 
@@ -101,20 +105,23 @@ def count_terms():
 
 def merge_blocks(block1, block2):
     """
-    Merge two blocks by merging the lists for duplicate words
+    Merge two blocks by merging the lists for duplicate words and sorting the postings
     """
     merged_block = OrderedDict()
     for block in [block1, block2]:
         for word, postings in block.items():
             if word in merged_block:
-                # Check if the first value is the same
-                if merged_block[word][0][0] == postings[0][0]:
-                    merged_block[word][0] = (merged_block[word][0][0], merged_block[word][0][1] + postings[0][1])
-                else:
-                    merged_block[word] += postings
+                merged_block[word] += postings
             else:
                 merged_block[word] = postings
-    sorted_block = OrderedDict(sorted(merged_block.items(), key=lambda x: x[0]))
+
+    sorted_block = OrderedDict()
+    for word, postings in merged_block.items():
+        sorted_postings = sorted(postings, key=lambda x: x[0])  # Sort the postings based on document ID
+        sorted_block[word] = sorted_postings
+
+    sorted_block = OrderedDict(sorted(sorted_block.items(), key=lambda x: x[0]))  # Sort the block by word
+
     return sorted_block
 
 def merge_all_blocks(file_paths):
@@ -137,4 +144,6 @@ def merge_all_blocks(file_paths):
                 merged_blocks.append(blocks[i])
         blocks = merged_blocks
 
-    return blocks[0]
+    merged_result = blocks[0]
+    sorted_result = OrderedDict(sorted(merged_result.items(), key=lambda x: x[0]))
+    return sorted_result

@@ -1,6 +1,6 @@
 import pygame
-import time
 from spimi import *
+
 documents = read_txt_files("./documents/")
 spimi = SPIMI()
 
@@ -250,6 +250,3 @@ class GUI:
             self.render_interface()
 
         pygame.quit()
-
-gui = GUI()
-gui.run()

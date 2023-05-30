@@ -55,7 +55,6 @@ class SPIMI:
 
         for term, frequency in term_frequency.items():
             #max_frequency = max(term_frequency.values())  # Calculate max frequency for the current term
-            
             tf_idf = frequency/len(self.documents)
             x = tf_idf
             lst = []
