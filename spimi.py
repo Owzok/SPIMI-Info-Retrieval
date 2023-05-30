@@ -25,7 +25,7 @@ class SPIMI:
         return tf * idf
 
     def merge(self):
-        spimi_index = open('spimi_inverted_index.txt', 'a+')
+        spimi_index = open('spimi_inverted_index.txt', 'a+', encoding='utf-8')
 
         for block in self.blocks:
             for term, postings in block.items():
@@ -37,6 +37,7 @@ class SPIMI:
 
     def search_query(self, query, documents, top_k):
         if not os.path.isfile('spimi_inverted_index.txt'):
+            print("Building index")
             self.index_documents(documents)
             
         self.documents = documents

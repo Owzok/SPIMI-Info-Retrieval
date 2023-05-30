@@ -94,8 +94,7 @@ def count_terms():
     count = 0
     with open("spimi_inverted_index.txt", 'r') as file:
         for line in file:
-            if line.strip():
-                count += 1
+            count += 1
     return count
 
 # ----- MERGE ------
@@ -124,7 +123,7 @@ def merge_all_blocks(file_paths):
     """
     blocks = []
     for file_path in file_paths:
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             block = json.load(file)  # Load the file content as a JSON object
             blocks.append(block)
 

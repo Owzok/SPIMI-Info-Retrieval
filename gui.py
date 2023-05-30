@@ -90,13 +90,13 @@ class GUI:
         # Perform SQL query simulation
         self.query_time = 0
         start_time = time.time()
-        self.n_terms = count_terms()
         # Simulate the SQL query and store the results
         self.results = spimi.search_query(self.query, documents, self.top_k)
         ans = ""
         for doc_id, document in enumerate(documents):
             if doc_id == self.results[0][0]:
                 self.b_result = document['text']
+        self.n_terms = count_terms()
         self.query_time = round(time.time() - start_time, 5)
         self.render_interface()
 

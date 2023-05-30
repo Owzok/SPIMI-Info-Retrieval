@@ -1,227 +1,101 @@
 {
-    "sarum": [
+    "persig": [
         [
             5,
-            3
+            1
         ]
     ],
-    "tard": [
+    "graci": [
         [
             5,
             2
         ]
     ],
-    "encontr": [
+    "aragorn": [
         [
             5,
             2
         ]
     ],
-    "tierr": [
+    "nob": [
+        [
+            5,
+            1
+        ]
+    ],
+    "logr": [
         [
             5,
             2
         ]
     ],
-    "brun": [
-        [
-            5,
-            1
-        ]
-    ],
-    "lengu": [
-        [
-            5,
-            1
-        ]
-    ],
-    "serpient": [
-        [
-            5,
-            1
-        ]
-    ],
-    "recib": [
-        [
-            5,
-            1
-        ]
-    ],
-    "ayud": [
+    "atac": [
         [
             5,
             2
         ]
     ],
-    "reencontr": [
+    "noch": [
         [
             5,
             1
         ]
     ],
-    "bilb": [
-        [
-            5,
-            3
-        ]
-    ],
-    "entreg": [
+    "dia": [
         [
             5,
             1
         ]
     ],
-    "libr": [
+    "par": [
         [
             5,
             1
         ]
     ],
-    "roj": [
+    "amon": [
         [
             5,
             1
         ]
     ],
-    "fronter": [
+    "s\u00fbl": [
         [
             5,
             1
         ]
     ],
-    "oest": [
+    "hir": [
         [
             5,
             1
         ]
     ],
-    "escrib": [
+    "graved": [
         [
             5,
             1
         ]
     ],
-    "aventur": [
+    "combat": [
         [
             5,
             1
         ]
     ],
-    "mes": [
+    "escap": [
         [
             5,
             1
         ]
     ],
-    "inici": [
+    "vad": [
         [
             5,
             1
         ]
     ],
-    "regres": [
-        [
-            5,
-            1
-        ]
-    ],
-    "comarc": [
-        [
-            5,
-            4
-        ]
-    ],
-    "mag": [
-        [
-            5,
-            1
-        ]
-    ],
-    "acompa\u00f1": [
-        [
-            5,
-            2
-        ]
-    ],
-    "bosqu": [
-        [
-            5,
-            2
-        ]
-    ],
-    "viej": [
-        [
-            5,
-            1
-        ]
-    ],
-    "visit": [
-        [
-            5,
-            1
-        ]
-    ],
-    "bombadil": [
-        [
-            5,
-            1
-        ]
-    ],
-    "dunlendin": [
-        [
-            5,
-            1
-        ]
-    ],
-    "segu": [
-        [
-            5,
-            1
-        ]
-    ],
-    "orden": [
-        [
-            5,
-            1
-        ]
-    ],
-    "merry": [
-        [
-            5,
-            2
-        ]
-    ],
-    "pippin": [
-        [
-            5,
-            2
-        ]
-    ],
-    "invasor": [
-        [
-            5,
-            1
-        ]
-    ],
-    "conoc": [
-        [
-            5,
-            1
-        ]
-    ],
-    "batall": [
-        [
-            5,
-            1
-        ]
-    ],
-    "delagu": [
-        [
-            5,
-            1
-        ]
-    ],
-    "hobbiton": [
+    "bruin": [
         [
             5,
             1
@@ -233,139 +107,67 @@
             1
         ]
     ],
-    "grim": [
-        [
-            5,
-            1
-        ]
-    ],
-    "ultim": [
-        [
-            5,
-            1
-        ]
-    ],
-    "cans": [
-        [
-            5,
-            1
-        ]
-    ],
-    "humill": [
-        [
-            5,
-            1
-        ]
-    ],
-    "muert": [
+    "glorfindel": [
         [
             5,
             2
         ]
     ],
-    "flechaz": [
+    "elfo": [
         [
             5,
             1
         ]
     ],
-    "saneamient": [
+    "elrond": [
         [
             5,
             1
         ]
     ],
-    "reconstruccion": [
+    "persegu": [
         [
             5,
             1
         ]
     ],
-    "a\u00f1o": [
+    "orden": [
         [
             5,
             1
         ]
     ],
-    "previst": [
+    "caball": [
         [
             5,
             1
         ]
     ],
-    "cerr": [
+    "asfaloth": [
         [
             5,
             1
         ]
     ],
-    "galadriel": [
-        [
-            5,
-            2
-        ]
-    ],
-    "comit": [
+    "llev": [
         [
             5,
             1
         ]
     ],
-    "elfos": [
-        [
-            5,
-            2
-        ]
-    ],
-    "junt": [
+    "mont": [
         [
             5,
             1
         ]
     ],
-    "gris": [
+    "arrastr": [
         [
             5,
             1
         ]
     ],
-    "esper": [
-        [
-            5,
-            1
-        ]
-    ],
-    "cird": [
-        [
-            5,
-            1
-        ]
-    ],
-    "dolor": [
-        [
-            5,
-            1
-        ]
-    ],
-    "desped": [
-        [
-            5,
-            1
-        ]
-    ],
-    "part": [
-        [
-            5,
-            1
-        ]
-    ],
-    "barc": [
-        [
-            5,
-            1
-        ]
-    ],
-    "impereceder": [
+    "corrient": [
         [
             5,
             1
