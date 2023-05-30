@@ -3,6 +3,7 @@ import math                                         # for log10
 import os, sys                                      # for listdir and path
 import json                                         # json.dump & .load
 from nltk.stem.snowball import SnowballStemmer      # for stemmer
+import re                                           # for regex in deleting special characters
 
 def get_n_docs():
     return len(get_files_from_folder('../documents/'))
@@ -16,11 +17,12 @@ def preprocess(document):
     raw_words = document['text'].lower().split()
     words = []
     for word in raw_words:
-        word = word.strip('?"º(),.')
-        if word not in stoplist:
+        word = re.sub(r'[^A-Za-z0-9]', '', word)  # Keep only A-Z and 0-9 characters
+        if word and word not in stoplist:  # Check if the word is not empty after filtering
             word = stemmer.stem(word)
             words.append(word)
     return words
+
 
 def calculate_tf_idf(frequency, document_frequency, total_documents):
     if document_frequency == 0:
