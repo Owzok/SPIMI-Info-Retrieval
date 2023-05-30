@@ -1,4 +1,4 @@
-from gui import *
+from gui import GUI
 
 # Menu
 # [0] : Just generate inverted index and end

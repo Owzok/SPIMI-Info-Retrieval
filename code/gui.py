@@ -1,7 +1,9 @@
 import pygame
-from spimi import *
+from spimi import SPIMI
+from utils import read_txt_files, count_terms
+import time
 
-documents = read_txt_files("./documents/")
+documents = read_txt_files("../documents/")
 spimi = SPIMI()
 
 class GUI:
@@ -19,7 +21,7 @@ class GUI:
         self.WINDOW_WIDTH = 720
         self.WINDOW_HEIGHT = 720
 
-        self.roboto_path = "Lato-Regular.ttf"
+        self.roboto_path = "../others/Lato-Regular.ttf"
 
         self.window = pygame.display.set_mode((self.WINDOW_WIDTH, self.WINDOW_HEIGHT))
         pygame.display.set_caption("SQL Query Simulator")

@@ -1,17 +1,14 @@
-from collections import defaultdict, OrderedDict
-import math
-import os
-import sys
-import json
-import time
-from nltk.stem.snowball import SnowballStemmer
-import time
+from collections import defaultdict, OrderedDict    # for dicts
+import math                                         # for log10
+import os, sys                                      # for listdir and path
+import json                                         # json.dump & .load
+from nltk.stem.snowball import SnowballStemmer      # for stemmer
 
 def get_n_docs():
-    return len(get_files_from_folder('./documents/'))
+    return len(get_files_from_folder('../documents/'))
 
 def preprocess(document):
-    with open("stop_words_spanish.txt", "rt") as f:
+    with open("../others/stop_words_spanish.txt", "rt") as f:
         stoplist = {word.strip() for word in f}
 
     stemmer = SnowballStemmer('spanish')
@@ -52,7 +49,7 @@ def write_to_disk(inverted_index, filename):
 
 def generate_index():
     inverted_index = defaultdict(list)
-    with open("spimi_inverted_index.txt", "r") as file:
+    with open("../spimi_inverted_index.txt", "r") as file:
         for line in file:
             line = line.strip()
             if not line:
@@ -96,7 +93,7 @@ def get_files_from_folder(folder_path):
 
 def count_terms():
     count = 0
-    with open("spimi_inverted_index.txt", 'r') as file:
+    with open("../spimi_inverted_index.txt", 'r') as file:
         for line in file:
             count += 1
     return count
