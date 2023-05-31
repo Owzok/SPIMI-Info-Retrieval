@@ -11,9 +11,10 @@
 #
 <p align="center"
 
-![ga](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![si](https://img.shields.io/badge/Academical%20Project-Yes-brightgreen?style=for-the-badge&logo=awesomewm) ![si](https://img.shields.io/badge/License-MIT-red?style=for-the-badge&logo=dpd)
-
+![ga](https://img.shields.io/badge/Python-3.6-blue?style=for-the-badge&logo=)
+![si](https://img.shields.io/badge/Academical%20Project-Yes-brightgreen?style=for-the-badge&logo=) 
+![si](https://img.shields.io/badge/License-MIT-red?style=for-the-badge&logo=)
+![si](https://img.shields.io/badge/Repo%20Size-2.8Mb-orange?style=for-the-badge&logo=)
 <p align="center"
 
 The **SPIMI** *(Single-Pass In-Memory Indexing)* project is a simple implementation of an indexing algorithm used in information retrieval systems. This project aims to demonstrate the basic concepts of building an inverted index using the SPIMI algorithm.
