@@ -50,24 +50,6 @@ def write_to_disk(inverted_index, filename):
     with open(filename, 'w') as file:
         json.dump(inverted_index, file, indent=4)
 
-def generate_index():
-    inverted_index = defaultdict(list)
-    with open("../spimi_inverted_index.txt", "r") as file:
-        for line in file:
-            line = line.strip()
-            if not line:
-                continue
-            
-            term, doc_weights = line.split(': ', 1)
-            doc_weights = doc_weights.strip('[]').split('], [')
-            
-            for doc_w in doc_weights:
-                doc_id, weight = doc_w.split(', ')
-                doc_id = int(doc_id)
-                weight = float(weight.split('],')[0])
-                inverted_index[term].append([doc_id, weight])
-    return inverted_index
-
 def read_txt_files(folder_path):
     file_list = os.listdir(folder_path)
     data_list = []
@@ -95,23 +77,19 @@ def get_files_from_folder(folder_path):
     return files
 
 def count_terms():
+    # Count how many lines are on the index
     count = 0
     with open("../spimi_inverted_index.txt", 'r') as file:
         for line in file:
             count += 1
     return count
-    
-def read_from_disk(file_path):
-    with open(file_path, 'r') as file:
-        data = file.read()
-    return data
 
 # ----- MERGE ------
 
 def merge_blocks(block1, block2):
-    """
-    Merge two blocks by merging the lists for duplicate words and sorting the postings
-    """
+
+    # Merge two blocks by merging the lists for duplicate words and sorting the postings
+
     merged_block = OrderedDict()
     for block in [block1, block2]:
         for word, postings in block.items():
@@ -130,9 +108,7 @@ def merge_blocks(block1, block2):
     return sorted_block
 
 def merge_all_blocks(file_paths):
-    """
-    Merge all blocks from separate text files
-    """
+    # Merge all blocks from separate text files
     blocks = []
     for file_path in file_paths:
         with open(file_path, 'r', encoding='utf-8') as file:

@@ -1,15 +1,15 @@
 from gui import GUI
 
-# Menu
-# [0] : Just generate inverted index and end
-# [1] : Search (includes generation)
-# [2] : Quit
-
 def __init__():
     gui = GUI()
     gui.run()
 
 def CLI():
+    """
+    [0] : Just generate inverted index and end
+    [1] : Search (includes generation)
+    [2] : Quit
+    """
     print("[0] : Just generate inverted index \n[1] : Search\n[2] : Quit")
     x = -1
     while x != 0 and x != 1:

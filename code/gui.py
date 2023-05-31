@@ -98,7 +98,8 @@ class GUI:
         for doc_id, document in enumerate(documents):
             if doc_id == self.results[0][0]:
                 self.b_result = document['text']
-        self.n_terms = count_terms()
+        # -- Temporally Disabled
+        #self.n_terms = count_terms()
         self.query_time = round(time.time() - start_time, 5)
         self.render_interface()
 
@@ -180,7 +181,8 @@ class GUI:
             self.draw_text(self.b_result, 55, 420, self.BLACK)'''
 
         self.draw_text(f"Time: {self.query_time}s", 55, 655, self.BLACK, font_size=15)
-        self.draw_text(f"Records Scanned: {self.n_terms}", 255, 655, self.BLACK, font_size=15)
+        # -- Temporally Disabled
+        #self.draw_text(f"Records Scanned: {self.n_terms}", 255, 655, self.BLACK, font_size=15)
 
         pygame.display.flip()
 

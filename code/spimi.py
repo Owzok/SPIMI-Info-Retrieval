@@ -147,22 +147,6 @@ class SPIMI:
 
         print("Closest word:", closest_word)
 
-    def read_every_500_lines(position):
-        with open("../isam_index.txt", 'r') as file:
-            current_line = 0
-
-            while True:
-                line = file.readline()
-                if not line:
-                    break
-
-                current_line += 1
-
-                if current_line == position:
-                    print(f"Line {file.tell()}: {line.strip()}")
-                    current_line = 0
-                    file.seek(file.tell() + len(line) * 499)
-
     def isam_binary_search(self, word):
         with open("../isam_index.txt", "r") as file:
             lines = file.read().strip().split('\n')
