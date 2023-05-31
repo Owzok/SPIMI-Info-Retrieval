@@ -23,6 +23,7 @@ The **SPIMI** *(Single-Pass In-Memory Indexing)* project is a simple implementat
 - Building an inverted index from a collection of documents.
 - Support for tokenization, stop word removal, and stemming.
 - ISAM indexation for search optimization.
+- We have merged multiple stoplists over the internet to make the best one possible.
 - Querying the inverted index to retrieve relevant documents.
 
 ### Prerequisites
@@ -53,18 +54,27 @@ nltk.download('stopwords')
 nltk.download('snowball_data')
 ```
 
+## Documents
+Right now the documents include a summary of "The lord of the Rings: The Fellowship of the Ring" splitted in 5 parts and "The Maze Runner" entire book.
+
 ## Usage
 1. Prepare your collection of documents in a suitable format (e.g., plain text files) and put them into the documents folder.
 
 2. Update the ```main.py``` file with the appropriate configuration parameters and paths to your document collection.
 
-3. Run the ```main.py``` script to build the inverted index:
+3. Change the directory to the main location:
+
+```sh
+cd 'code'
+```
+
+4. Run the ```main.py``` script to run the program:
 
 ```sh
 python main.py
 ```
 
-4. After attempting a search, the index is built, you can perform queries on the indexed documents using the provided query interface.
+5. After attempting a search, the index is built, you can perform queries on the indexed documents using the provided query interface.
 
 <p align="center"><img src="./others/gui.png" width=500></p>  
 
