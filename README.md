@@ -22,6 +22,7 @@ The **SPIMI** *(Single-Pass In-Memory Indexing)* project is a simple implementat
 ## Features
 - Building an inverted index from a collection of documents.
 - Support for tokenization, stop word removal, and stemming.
+- ISAM indexation for search optimization.
 - Querying the inverted index to retrieve relevant documents.
 
 ### Prerequisites

@@ -1,11 +1,14 @@
 from utils import *
+import linecache
+import ast
 
 class SPIMI:
     def __init__(self):
         self.inverted_index = defaultdict(list)
         self.block = 0
         # it's in kilobytes, when size is reached, writes the block
-        self.BLOCK_SIZE = 10000
+        self.BLOCK_SIZE = 30000
+        self.interval = 500
 
     def search_query(self, query, documents, top_k):
         # if index exists don't build another one
@@ -14,7 +17,7 @@ class SPIMI:
         
         query_terms = preprocess({'text': query})
 
-        self.inverted_index = generate_index()
+        #self.inverted_index = generate_index()
 
         term_frequency = defaultdict(int)
 
@@ -37,6 +40,7 @@ class SPIMI:
             index = 0
             # Gets term weight for each document
             for doc_id in range(get_n_docs()):
+                self.isam_binary_search(term)
                 if index != len(self.inverted_index[term]) and self.inverted_index[term][index][0] == doc_id:
                     weight_list.append(self.inverted_index[term][index])
                     index += 1
@@ -50,6 +54,8 @@ class SPIMI:
         # Sorts the dict by value to get the best scored documents first
         sorted_results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
         sorted_results = sorted_results[:int(top_k)]
+
+
         return sorted_results
 
     def index_documents(self, documents):
@@ -76,5 +82,127 @@ class SPIMI:
         merged_block = merge_all_blocks(get_files_from_folder("../blocks/"))
                                                             # Write main index
         write_to_disk_with_tfidf(merged_block, "../spimi_inverted_index.txt", 6)
+        self.build_isam_index()
+        return
 
+    def build_isam_index(self):
+        """
+        When we open a file using the open() function in Python, the entire file is not loaded into RAM by default. 
+        By default, file reading operations are buffered, which means that only a portion of the file (a buffer) 
+        is loaded into memory at a time.
+
+        When you read from the file using methods like read(), readline(), or iterate over the file object using a loop,
+        the data is read from the buffer into memory. The size of the buffer used may vary depending on the platform and 
+        the specific file object implementation.
+        """
+        line_index = {}
+
+        with open("../spimi_inverted_index.txt", "r") as input_file:
+            with open("../isam_index.txt", "w") as index_file:
+                byte_offset = 0
+                line_number = 0
+
+                while True:
+                    line = input_file.readline()
+                    if not line:
+                        break
+
+                    if line_number % self.interval == 0:
+                        index_file.write(f"{line.strip().split(':')[0]}:{byte_offset}\n")
+                        line_index[line_number] = byte_offset
+
+                    byte_offset += len(line.encode())
+                    line_number += 1
+
+        return line_index
+
+    
+    def isam_binary_search(self, word):
+        with open("../isam_index.txt", "r") as file:
+            lines = file.read().strip().split('\n')
+
+        interval = int(lines[0])
+        values = lines[1:]
+
+        # Perform binary search
+        left = 0
+        right = len(values) - 1
+        closest_word = None
+
+        while left <= right:
+            mid = (left + right) // 2
+            current_word = values[mid]
+
+            if current_word.lower() == word.lower():
+                # Exact match found
+                closest_word = current_word
+                break
+            elif current_word.lower() < word.lower():
+                # Update closest_word and search in the right half
+                closest_word = current_word
+                left = mid + 1
+            else:
+                # Search in the left half
+                right = mid - 1
+
+        print("Closest word:", closest_word)
+
+    def read_every_500_lines(position):
+        with open("../isam_index.txt", 'r') as file:
+            current_line = 0
+
+            while True:
+                line = file.readline()
+                if not line:
+                    break
+
+                current_line += 1
+
+                if current_line == position:
+                    print(f"Line {file.tell()}: {line.strip()}")
+                    current_line = 0
+                    file.seek(file.tell() + len(line) * 499)
+
+    def isam_binary_search(self, word):
+        with open("../isam_index.txt", "r") as file:
+            lines = file.read().strip().split('\n')
+
+        values = lines[0:]
+
+        # Perform binary search
+        left = 0
+        right = len(values) - 1
+        closest_word = None
+
+        while left <= right:
+            mid = (left + right) // 2
+            current_word = values[mid]
+
+            if current_word.lower() == word.lower():
+                # Exact match found
+                closest_word = current_word
+                break
+            elif current_word.lower() < word.lower():
+                # Update closest_word and search in the right half
+                closest_word = current_word
+                left = mid + 1
+            else:
+                # Search in the left half
+                right = mid - 1
+
+        self.read_index(int(closest_word.split(":")[1]))
+        return
+
+    def read_index(self, pos):
+        self.inverted_index.clear()
+        with open("../spimi_inverted_index.txt", "r") as file:
+            file.seek(pos)
+            
+            lines = []
+            for _ in range(self.interval+1):
+                line = file.readline().strip()
+                if not line:
+                    break
+                x = line.split(":")
+                self.inverted_index[x[0]] = ast.literal_eval(x[1].strip("'"))
         return

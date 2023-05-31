@@ -4,6 +4,7 @@ import os, sys                                      # for listdir and path
 import json                                         # json.dump & .load
 from nltk.stem.snowball import SnowballStemmer      # for stemmer
 import re                                           # for regex in deleting special characters
+import pickle
 
 def get_n_docs():
     return len(get_files_from_folder('../documents/'))
@@ -99,6 +100,11 @@ def count_terms():
         for line in file:
             count += 1
     return count
+    
+def read_from_disk(file_path):
+    with open(file_path, 'r') as file:
+        data = file.read()
+    return data
 
 # ----- MERGE ------
 
