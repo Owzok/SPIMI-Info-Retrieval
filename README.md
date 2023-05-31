@@ -11,7 +11,8 @@
 #
 <p align="center"
 
-![si](https://camo.githubusercontent.com/3e47acbf09cde3b0ad08c991a390ce5b57d457f95db0154831d95ab094d7bd02/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f41636164656d6963616c25323050726f6a6563742d5965732d73756363657373) ![si](https://camo.githubusercontent.com/7234f85510f85db1deddffb4d8acead60b88f6d6cbb89992ad616235e1816c0b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d616465253230576974682d507974686f6e2d626c7565)  ![si](https://img.shields.io/badge/License-MIT-red)
+![ga](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![si](https://img.shields.io/badge/Academical%20Project-Yes-brightgreen?style=for-the-badge&logo=awesomewm) ![si](https://img.shields.io/badge/License-MIT-red?style=for-the-badge&logo=dpd)
 
 <p align="center"
 
