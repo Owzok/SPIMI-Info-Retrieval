@@ -43,16 +43,7 @@ git clone https://github.com/your-username/spimi-index-project.git
 
 2. Install the required dependencies:
 ```sh
-pip install nltk
-```
-
-3. Download the necessary NLTK resources:
-```py
-import nltk
-
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('snowball_data')
+pip install -r requirements.txt
 ```
 
 ## Documents
