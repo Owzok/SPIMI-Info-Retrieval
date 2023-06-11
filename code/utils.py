@@ -5,11 +5,18 @@ import json                                         # json.dump & .load
 from nltk.stem.snowball import SnowballStemmer      # for stemmer
 import re                                           # for regex in deleting special characters
 import pickle
-
+ 
 def get_n_docs():
     return len(get_files_from_folder('../documents/'))
 
 def preprocess(document):
+    """
+    Takes a dict-like object with a field called text containing the entireity of text to be 
+    preprocessed.
+    Returns list of terms without special characters.
+
+    TODO: Text must fit in ram to do this. Mabe readlinieify or specialize the function to deal with files?
+    """
     with open("../others/stop_words_spanish.txt", "rt") as f:
         stoplist = {word.strip() for word in f}
 
@@ -18,7 +25,7 @@ def preprocess(document):
     raw_words = document['text'].lower().split()
     words = []
     for word in raw_words:
-        word = re.sub(r'[^A-Za-z0-9]', '', word)  # Keep only A-Z and 0-9 characters
+        word = re.sub(r'[^A-Za-z]', '', word)  # Keep only A-Z and 0-9 characters
         if word and word not in stoplist:  # Check if the word is not empty after filtering
             word = stemmer.stem(word)
             words.append(word)
@@ -51,6 +58,7 @@ def write_to_disk(inverted_index, filename):
         json.dump(inverted_index, file, indent=4)
 
 def read_txt_files(folder_path):
+    #print("hi")
     file_list = os.listdir(folder_path)
     data_list = []
 

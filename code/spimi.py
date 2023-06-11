@@ -4,7 +4,12 @@ import ast
 
 class SPIMI:
     def __init__(self):
-        self.inverted_index = defaultdict(list)
+        """ 
+        inverted_index is a dictionary that looks like {term:[(doc1,freq1),(doc2,freq2)...]}. 
+            Non existance of a (doc,freq) pair implies zero freq.
+            It contains the last non-dumped section of the index
+        """
+        self.inverted_index = defaultdict(list) 
         self.block = 0
         # it's in kilobytes, when size is reached, writes the block
         self.BLOCK_SIZE = 30000
@@ -13,8 +18,10 @@ class SPIMI:
     def search_query(self, query, documents, top_k):
         # if index exists don't build another one
         if not os.path.isfile('../spimi_inverted_index.txt'):
+            print("[INFO] Creating Index. Hold on...")
             self.index_documents(documents)
         
+
         query_terms = preprocess({'text': query})
 
         #self.inverted_index = generate_index()
@@ -29,41 +36,40 @@ class SPIMI:
         weights = defaultdict(float)
         
         # ---- COSINE DISTANCE ----
-        for term, frequency in term_frequency.items():
-            # x -> tf = word frequency / amount of documents
-            tf_idf = frequency/len(documents)
+        with open("../spimi_inverted_index.txt") as index_file:
+            for line in index_file.readlines():
+                #get the term and counts for all 
+                term = line.split(":")[0]
 
-            # list with weight for each document
-            weight_list = []
-            
-            # Similar to linked lists intersection algorithm
-            index = 0
-            # Gets term weight for each document
-            for doc_id in range(get_n_docs()):
-                self.isam_binary_search(term)
-                if index != len(self.inverted_index[term]) and self.inverted_index[term][index][0] == doc_id:
-                    weight_list.append(self.inverted_index[term][index])
-                    index += 1
-                else:
-                    weight_list.append((doc_id, 0.0))
+                # TODO:
+                #todo esto es estupidiiiisimo por muchos motivos
+                #1: estamos recorriendo el indice entero en cada query. Podriamos no hacerlo. este es el todo
+                #2: estamos leyendo texto que se interpreta como codigo lo que es ESTUPIDO, y jamas deberia hacerse en produccion!!
+                #3: procesar cosas con AST demora lo que demora compilar codigo: POR QUE CAR**O ESO ES ALGO QUE TENGO QUE HACER???
+                #4: toda la ineficiencia esta en un bucle: pasar de un tipo de dato a otro, TODITO!!!
 
-            # Sums the term weight to the document weight
-            for doc_id in range(get_n_docs()):
-                weights[doc_id] += weight_list[doc_id][1] * tf_idf
-            
-        # Sorts the dict by value to get the best scored documents first
-        sorted_results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
-        sorted_results = sorted_results[:int(top_k)]
+                # @Martin, has forzado mi mano a cometer sacrilegio. Odio todo
 
-
-        return sorted_results
+                if term in query_terms:
+                    lista = ast.literal_eval("["+line.split(":")[1].strip()+"]")
+                    for tf_idf in lista:
+                        weights[tf_idf[0]] += term_frequency[term]*tf_idf[1];
+        results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
+        try:
+            results = results[:int(top_k)]
+        except:
+            pass
+        return results
 
     def index_documents(self, documents):
+        """
+        documents is a list of dict-like objects with a field for all the text in a document
+        """
         for doc_id, document in enumerate(documents):       
-            terms = preprocess(document)
+            terms = preprocess(document)           #terms is a list of all terms on this dicument
             term_frequency = defaultdict(int)
 
-            for term in terms:                              # Get frequency of each word
+            for term in terms:                              # Get frequency of each word for this document
                 term_frequency[term] += 1
 
             for term, frequency in term_frequency.items():
@@ -72,14 +78,14 @@ class SPIMI:
                     self.inverted_index.clear()
                     self.block += 1
                 self.inverted_index[term].append((doc_id, frequency))
-            
-            term_frequency.clear()
+
 
         if self.inverted_index:                             # Write another block if inverted index isn't empty
             write_to_disk(self.inverted_index, f"../blocks/block-{self.block}.txt")
             self.inverted_index.clear()
                                                             # Apply merge sort
-        merged_block = merge_all_blocks(get_files_from_folder("../blocks/"))
+        #merged block is OrderedDict looking like {term:[(doc1,count1),(doc2,count2)...]}
+        merged_block = merge_all_blocks(get_files_from_folder("../blocks/")) 
                                                             # Write main index
         write_to_disk_with_tfidf(merged_block, "../spimi_inverted_index.txt", 6)
         self.build_isam_index()
@@ -115,78 +121,4 @@ class SPIMI:
                     line_number += 1
 
         return line_index
-
     
-    def isam_binary_search(self, word):
-        with open("../isam_index.txt", "r") as file:
-            lines = file.read().strip().split('\n')
-
-        interval = int(lines[0])
-        values = lines[1:]
-
-        # Perform binary search
-        left = 0
-        right = len(values) - 1
-        closest_word = None
-
-        while left <= right:
-            mid = (left + right) // 2
-            current_word = values[mid]
-
-            if current_word.lower() == word.lower():
-                # Exact match found
-                closest_word = current_word
-                break
-            elif current_word.lower() < word.lower():
-                # Update closest_word and search in the right half
-                closest_word = current_word
-                left = mid + 1
-            else:
-                # Search in the left half
-                right = mid - 1
-
-        print("Closest word:", closest_word)
-
-    def isam_binary_search(self, word):
-        with open("../isam_index.txt", "r") as file:
-            lines = file.read().strip().split('\n')
-
-        values = lines[0:]
-
-        # Perform binary search
-        left = 0
-        right = len(values) - 1
-        closest_word = None
-
-        while left <= right:
-            mid = (left + right) // 2
-            current_word = values[mid]
-
-            if current_word.lower() == word.lower():
-                # Exact match found
-                closest_word = current_word
-                break
-            elif current_word.lower() < word.lower():
-                # Update closest_word and search in the right half
-                closest_word = current_word
-                left = mid + 1
-            else:
-                # Search in the left half
-                right = mid - 1
-
-        self.read_index(int(closest_word.split(":")[1]))
-        return
-
-    def read_index(self, pos):
-        self.inverted_index.clear()
-        with open("../spimi_inverted_index.txt", "r") as file:
-            file.seek(pos)
-            
-            lines = []
-            for _ in range(self.interval+1):
-                line = file.readline().strip()
-                if not line:
-                    break
-                x = line.split(":")
-                self.inverted_index[x[0]] = ast.literal_eval(x[1].strip("'"))
-        return
