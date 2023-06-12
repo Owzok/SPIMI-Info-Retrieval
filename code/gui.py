@@ -1,11 +1,12 @@
 import pygame
 from spimi import SPIMI
+from pgquerier import PG
 from utils import read_txt_files, count_terms
 import time
 
 documents = read_txt_files("../documents/")
 spimi = SPIMI()
-
+pg_querier = PG("bd2_proyecto","postgres","prochazka")
 class GUI:
     def __init__(self):
         pygame.init()
@@ -93,6 +94,10 @@ class GUI:
         for i, result in enumerate(self.our_results):
             self.draw_text(str(result[0]), self.our_results_rect.x + 40, self.our_results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
             self.draw_text(str(result[1]), self.our_results_rect.x + 150, self.our_results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
+        
+        for i, result in enumerate(self.pg_results):
+            self.draw_text(str(result[0]), self.pg_results_rect.x + 40, self.pg_results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
+            self.draw_text(str(result[1]), self.pg_results_rect.x + 150, self.pg_results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
 
     def perform_search(self):
         # Perform SQL query simulation
@@ -101,12 +106,17 @@ class GUI:
         # Simulate the SQL query and store the results
         self.our_results = spimi.search_query(self.query, documents, self.top_k)
         ans = ""
-        for doc_id, document in enumerate(documents):
+        for doc_id, document in enumerate(documents): #martin, que hace esto? 
             if len(self.our_results) > 0 and doc_id == self.our_results[0][0]: #check for existance of results
                 self.b_result = document['text']
         # -- Temporally Disabled
         #self.n_terms = count_terms()
         self.our_query_time = round(time.time() - start_time, 5)
+        
+        # PSQL TIME!
+        start_time = time.perf_counter()
+        self.pg_results = pg_querier.search_query(self.query,self.top_k) # looks like [(int: id,float: tf-idf normalized score)]
+        self.pg_query_time = round(time.perf_counter() - start_time,5)
         self.render_interface()
 
     def button_click(self):
@@ -184,7 +194,10 @@ class GUI:
         self.draw_text("doc_id", self.our_results_rect_head.x + 22, self.our_results_rect_head.y + 73, self.BLACK, font_size=15)
         self.draw_text("tf-idf", self.our_results_rect_head.x + 200, self.our_results_rect_head.y + 73, self.BLACK, font_size=15)
 
+            #pg draws
         self.draw_text("Postgres", self.pg_results_rect_head.x + 20,self.pg_results_rect_head.y + 20 , self.BLACK, font_size=20)
+        self.draw_text("doc_id", self.pg_results_rect_head.x + 22, self.pg_results_rect_head.y + 73, self.BLACK, font_size=15)
+        self.draw_text("score", self.pg_results_rect_head.x + 200, self.pg_results_rect_head.y + 73, self.BLACK, font_size=15)
         # --
         self.render_results()
         '''
@@ -193,7 +206,8 @@ class GUI:
         else:
             self.draw_text(self.b_result, 55, 420, self.BLACK)'''
 
-        self.draw_text(f"Time: {self.our_query_time}s", 55, 655, self.BLACK, font_size=15)
+        self.draw_text(f"Our Time: {self.our_query_time}s", 55, 655, self.BLACK, font_size=15)
+        self.draw_text(f"Pg Time: {self.pg_query_time}s", 700 + 55, 655, self.BLACK, font_size=15)
         # -- Temporally Disabled
         #self.draw_text(f"Records Scanned: {self.n_terms}", 255, 655, self.BLACK, font_size=15)
 

@@ -6,13 +6,25 @@ TEST = True
 class PG:
 
     #Esta clase pide una db y un usuario para conectarse a PG
-    def __init__(self,db_name,owner):
+    def __init__(self,db_name,owner, password=None, host=None):
         self.dbname = db_name
         self.user = owner 
+        self.password = password
+        self.host = host
 
     def getConnection(self):
-        #esto existe para poder configurar facilmente la coneccion
-        return psycopg2.connect(dbname=self.dbname,user=self.user)
+        try:
+            #esto existe para poder configurar facilmente la coneccion
+            if self.password != None:
+                if self.host != None:
+                    return psycopg2.connect(dbname=self.dbname,user=self.user, password=self.password, host = self.host)
+                else:
+                    return psycopg2.connect(dbname=self.dbname,user=self.user, password=self.password)
+            return psycopg2.connect(dbname=self.dbname,user=self.user)
+        except:
+            raise Exception("[ERROR] Could not connect to database.")
+
+            
 
     def db_exists(self):
         conn = self.getConnection()
@@ -76,8 +88,8 @@ class PG:
             cur.execute("CREATE INDEX idxTextosText_vectorGin ON textos USING GIN (text_vector);")
             conn.commit()
         except:
-            print("[ERROR] Could not insert documents")
             conn.rollback()
+            raise Exception("[ERROR] Could not insert documents")
         conn.close()
         return
 
@@ -92,21 +104,23 @@ class PG:
 
         return value: list of tuples: (id, score)
         """
+        
+        #sanitize topk
+
+        try:
+            topk = int(topk)
+        except:
+            topk = 1
+
         query_sql = """
             SELECT id, ts_rank(text_vector, query) AS rank
-            FROM textos, to_tsquery('spanish', %s) AS query
-            WHERE text_vector @@ query
+            FROM textos, plainto_tsquery('spanish', %s) AS query
             ORDER BY rank DESC
             LIMIT %s;
         """
         conn = self.getConnection()
         cur = conn.cursor()
-
-        cur.execute(query_sql,(query,topk))
-        print(cur.fetchall())
-
-
-if TEST:
-    docs = utils.read_txt_files("../documents/")
-    querier = PG("bd2_proyecto","postgres") #works in my machine. Yours will be different
-    querier.search_query("frodo",2)
+        cur.execute(query_sql,[query,topk])
+        results = cur.fetchall()
+        conn.close()
+        return results
