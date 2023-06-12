@@ -1,11 +1,12 @@
 import pygame
 from spimi import SPIMI
+from pgquerier import PG
 from utils import read_txt_files, count_terms
 import time
 
 documents = read_txt_files("../documents/")
 spimi = SPIMI()
-
+pg_querier = PG("bd2_proyecto","postgres","prochazka")
 class GUI:
     def __init__(self):
         pygame.init()
@@ -18,7 +19,7 @@ class GUI:
         self.WHITE_BG = (241,241,241)
         self.GRAY = (220,220,220)
 
-        self.WINDOW_WIDTH = 720
+        self.WINDOW_WIDTH = 1500
         self.WINDOW_HEIGHT = 720
 
         self.roboto_path = "../others/Lato-Regular.ttf"
@@ -31,8 +32,10 @@ class GUI:
 
         self.query = ""
         self.top_k = ""
-        self.results = []
-        self.query_time = 0
+        self.our_results = []
+        self.pg_results = []
+        self.our_query_time = 0
+        self.pg_query_time = 0
         self.active_field = None
 
         self.b_result = ""
@@ -45,8 +48,12 @@ class GUI:
         self.q_rect = pygame.Rect(35, 140, 640, 60)
         self.k_rect = pygame.Rect(530, 45, 70, 35)
         self.BUTTON_RECT = pygame.Rect(610, 45, 60, 35)
-        self.results_rect_head = pygame.Rect(35, 215, 640, 100)
-        self.results_rect = pygame.Rect(35, 315, 640, 330)
+
+        self.our_results_rect_head = pygame.Rect(35, 215, 640, 100)
+        self.our_results_rect = pygame.Rect(35, 315, 640, 330)
+
+        self.pg_results_rect_head =  pygame.Rect(640+35+35, 215, 640, 100)
+        self.pg_results_rect = pygame.Rect(640+35+35, 315, 640, 330)
 
     def draw_text(self, text, x, y, color, font_size=20, box_width=720, box_height=720, opacity=255, bold=False):
         font = pygame.font.Font(self.roboto_path, font_size)
@@ -84,23 +91,32 @@ class GUI:
             self.window.blit(text_surface, (x, y + i * line_spacing))
 
     def render_results(self):
-        for i, result in enumerate(self.results):
-            self.draw_text(str(result[0]), self.results_rect.x + 40, self.results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
-            self.draw_text(str(result[1]), self.results_rect.x + 150, self.results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
+        for i, result in enumerate(self.our_results):
+            self.draw_text(str(result[0]), self.our_results_rect.x + 40, self.our_results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
+            self.draw_text(str(result[1]), self.our_results_rect.x + 150, self.our_results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
+        
+        for i, result in enumerate(self.pg_results):
+            self.draw_text(str(result[0]), self.pg_results_rect.x + 40, self.pg_results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
+            self.draw_text(str(result[1]), self.pg_results_rect.x + 150, self.pg_results_rect.y + 10 + (i * 25), self.BLACK, font_size=14)
 
     def perform_search(self):
         # Perform SQL query simulation
-        self.query_time = 0
+        self.our_query_time = 0
         start_time = time.time()
         # Simulate the SQL query and store the results
-        self.results = spimi.search_query(self.query, documents, self.top_k)
+        self.our_results = spimi.search_query(self.query, documents, self.top_k)
         ans = ""
-        for doc_id, document in enumerate(documents):
-            if doc_id == self.results[0][0]:
+        for doc_id, document in enumerate(documents): #martin, que hace esto? 
+            if len(self.our_results) > 0 and doc_id == self.our_results[0][0]: #check for existance of results
                 self.b_result = document['text']
         # -- Temporally Disabled
         #self.n_terms = count_terms()
-        self.query_time = round(time.time() - start_time, 5)
+        self.our_query_time = round(time.time() - start_time, 5)
+        
+        # PSQL TIME!
+        start_time = time.perf_counter()
+        self.pg_results = pg_querier.search_query(self.query,self.top_k) # looks like [(int: id,float: tf-idf normalized score)]
+        self.pg_query_time = round(time.perf_counter() - start_time,5)
         self.render_interface()
 
     def button_click(self):
@@ -111,12 +127,12 @@ class GUI:
         # Background
         self.window.fill(self.BG_COLOR)
         # Main Panel
-        curve_surface = pygame.Surface((650, 650))
+        curve_surface = pygame.Surface((1335, 650))
         curve_surface.fill(self.WHITE_BG)
         self.window.blit(curve_surface, (30, 35))
 
         # Top panel
-        top_rect = pygame.Rect(30, 35, 650, 60)
+        top_rect = pygame.Rect(30, 35, 650, 1335)
         pygame.draw.rect(self.window, self.WHITE, top_rect)
         self.draw_text("SPIMI Search Engine", top_rect.x + 20, top_rect.y + 17, self.BLACK)
 
@@ -162,16 +178,26 @@ class GUI:
 
         # Results panel
             # Head
-        pygame.draw.rect(self.window, self.WHITE, self.results_rect_head)
-        pygame.draw.rect(self.window, self.GRAY, self.results_rect_head, 1)
+        pygame.draw.rect(self.window, self.WHITE, self.our_results_rect_head)
+        pygame.draw.rect(self.window, self.GRAY, self.our_results_rect_head, 1)
+
+        pygame.draw.rect(self.window, self.WHITE, self.pg_results_rect_head)
+        pygame.draw.rect(self.window, self.GRAY, self.pg_results_rect_head, 1)
             # Body
-        pygame.draw.rect(self.window, self.WHITE, self.results_rect)
-        pygame.draw.rect(self.window, self.GRAY, self.results_rect, 1)
+        pygame.draw.rect(self.window, self.WHITE, self.our_results_rect)
+        pygame.draw.rect(self.window, self.GRAY, self.our_results_rect, 1)
 
-        self.draw_text("Results", self.results_rect_head.x + 20, self.results_rect_head.y + 20, self.BLACK, font_size=20)
-        self.draw_text("doc_id", self.results_rect_head.x + 22, self.results_rect_head.y + 73, self.BLACK, font_size=15)
-        self.draw_text("tf-idf", self.results_rect_head.x + 200, self.results_rect_head.y + 73, self.BLACK, font_size=15)
+        pygame.draw.rect(self.window, self.WHITE, self.pg_results_rect)
+        pygame.draw.rect(self.window, self.GRAY, self.pg_results_rect, 1)
 
+        self.draw_text("Results", self.our_results_rect_head.x + 20, self.our_results_rect_head.y + 20, self.BLACK, font_size=20)
+        self.draw_text("doc_id", self.our_results_rect_head.x + 22, self.our_results_rect_head.y + 73, self.BLACK, font_size=15)
+        self.draw_text("tf-idf", self.our_results_rect_head.x + 200, self.our_results_rect_head.y + 73, self.BLACK, font_size=15)
+
+            #pg draws
+        self.draw_text("Postgres", self.pg_results_rect_head.x + 20,self.pg_results_rect_head.y + 20 , self.BLACK, font_size=20)
+        self.draw_text("doc_id", self.pg_results_rect_head.x + 22, self.pg_results_rect_head.y + 73, self.BLACK, font_size=15)
+        self.draw_text("score", self.pg_results_rect_head.x + 200, self.pg_results_rect_head.y + 73, self.BLACK, font_size=15)
         # --
         self.render_results()
         '''
@@ -180,7 +206,8 @@ class GUI:
         else:
             self.draw_text(self.b_result, 55, 420, self.BLACK)'''
 
-        self.draw_text(f"Time: {self.query_time}s", 55, 655, self.BLACK, font_size=15)
+        self.draw_text(f"Our Time: {self.our_query_time}s", 55, 655, self.BLACK, font_size=15)
+        self.draw_text(f"Pg Time: {self.pg_query_time}s", 700 + 55, 655, self.BLACK, font_size=15)
         # -- Temporally Disabled
         #self.draw_text(f"Records Scanned: {self.n_terms}", 255, 655, self.BLACK, font_size=15)
 

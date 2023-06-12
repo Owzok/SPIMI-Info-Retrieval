@@ -1,10 +1,11 @@
 from gui import GUI
+from spimi import SPIMI
 
 def __init__():
     gui = GUI()
     gui.run()
 
-def CLI():
+def CLI(spimi):
     """
     [0] : Just generate inverted index and end
     [1] : Search (includes generation)
