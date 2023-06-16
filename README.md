@@ -17,15 +17,17 @@
 ![si](https://img.shields.io/badge/Repo%20Size-2.8Mb-orange?style=for-the-badge&logo=)
 <p align="center"
 
-The **SPIMI** *(Single-Pass In-Memory Indexing)* project is a simple implementation of an indexing algorithm used in information retrieval systems. This project aims to demonstrate the basic concepts of building an inverted index using the SPIMI algorithm.
+The **SPIMI** *(Single-Pass In-Memory Indexing)* project is a simple implementation of an indexing algorithm used in information retrieval systems. This project aims to demonstrate the basic concepts of building an inverted index using the SPIMI algorithm as well as comparing query search times from our python index against SQL indexation.
 </p>
 
 ## Features
 - Building an inverted index from a collection of documents.
 - Support for tokenization, stop word removal, and stemming.
-- ISAM indexation for search optimization.
+- Indexation for search optimization.
+- Visual Interface.
 - We have merged multiple stoplists over the internet to make the best one possible.
 - Querying the inverted index to retrieve relevant documents.
+- SQL queries adapted from the NLP python ones. (creo)
 
 ### Prerequisites
 
@@ -33,6 +35,7 @@ To run the SPIMI index project, you need to have the following installed:
 - Python (version 3.6 or higher)
 - NLTK (Natural Language Toolkit) library
 - Pygame (SDL wrapped library)
+- Psycopg2 (Python to SQL connection)
 
 ### Installation
 
@@ -70,10 +73,8 @@ python main.py
 
 <p align="center"><img src="./others/gui.png" width=500></p>  
 
+## Obtained Results
 
-## Contributing
-
-Contributions to the SPIMI index project are welcome! If you find any bugs, have feature requests, or would like to make improvements, please feel free to open an issue or submit a pull request.
 
 ## License
 Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more information.

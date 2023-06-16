@@ -1,6 +1,7 @@
 from utils import *
 import linecache
 import ast
+from operator import itemgetter
 
 class SPIMI:
     def __init__(self):
@@ -52,7 +53,9 @@ class SPIMI:
 
                 if term in query_terms:
                     lista = ast.literal_eval("["+line.split(":")[1].strip()+"]")
+                    print(lista)
                     for tf_idf in lista:
+                        print(tf_idf)
                         weights[tf_idf[0]] += term_frequency[term]*tf_idf[1];
         results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
         try:
@@ -74,14 +77,16 @@ class SPIMI:
 
             for term, frequency in term_frequency.items():
                 if sys.getsizeof(self.inverted_index) > self.BLOCK_SIZE:
-                    write_to_disk(self.inverted_index, f"../blocks/block-{self.block}.txt")
+                    sorted_blocks = sorted(self.inverted_index.items(), key=itemgetter(0))  # Sort blocks by term
+                    write_to_disk(sorted_blocks, f"../blocks/block-{self.block}.txt")
                     self.inverted_index.clear()
                     self.block += 1
+
                 self.inverted_index[term].append((doc_id, frequency))
 
-
         if self.inverted_index:                             # Write another block if inverted index isn't empty
-            write_to_disk(self.inverted_index, f"../blocks/block-{self.block}.txt")
+            sorted_blocks = sorted(self.inverted_index.items(), key=itemgetter(0))  # Sort blocks by term
+            write_to_disk(sorted_blocks, f"../blocks/block-{self.block}.txt")
             self.inverted_index.clear()
                                                             # Apply merge sort
         #merged block is OrderedDict looking like {term:[(doc1,count1),(doc2,count2)...]}

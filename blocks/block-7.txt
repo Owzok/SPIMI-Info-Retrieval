@@ -1,3176 +1,4574 @@
-{
-    "cuadrcul": [
+[
+    [
+        "aayyy",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "c": [
+    [
+        "abord",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "interjeccin": [
+    [
+        "abraz",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "r": [
+    [
+        "abrier",
         [
-            6,
-            4
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "p": [
+    [
+        "abrig",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "u": [
+    [
+        "absorb",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "rescat": [
+    [
+        "absteng",
         [
-            6,
-            7
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "concord": [
+    [
+        "aceptarn",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "busqu": [
+    [
+        "aconsej",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "manotaz": [
+    [
+        "acu",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dilem": [
+    [
+        "acuos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "adis": [
+    [
+        "adam",
         [
-            6,
-            2
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "minuci": [
+    [
+        "ademn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "iran": [
+    [
+        "aferrndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "jovial": [
+    [
+        "agil",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "truculent": [
+    [
+        "agitndos",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "baby": [
+    [
+        "agolp",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "marip": [
+    [
+        "ahogndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pulgar": [
+    [
+        "albert",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "regular": [
+    [
+        "alcald",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "progres": [
+    [
+        "alentndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "privac": [
+    [
+        "alentndon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "orme": [
+    [
+        "alzand",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "imaginndos": [
+    [
+        "amant",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "envindosel": [
+    [
+        "amn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "extenu": [
+    [
+        "amplific",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "amant": [
+    [
+        "amulet",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dart": [
+    [
+        "andant",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pudir": [
+    [
+        "andes",
         [
-            6,
-            2
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "telepat": [
+    [
+        "andraj",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "profundiz": [
+    [
+        "anestesi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "lanzart": [
+    [
+        "apesadumbr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "fiar": [
+    [
+        "aplac",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "leyend": [
+    [
+        "aplaus",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "toxin": [
+    [
+        "apndic",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "aconsej": [
+    [
+        "aprat",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "exuber": [
+    [
+        "apretuj",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "frut": [
+    [
+        "apto",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "oh": [
+    [
+        "apuntndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "decayer": [
+    [
+        "armndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dispus": [
+    [
+        "arras",
         [
-            6,
-            2
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "echarl": [
+    [
+        "arriesgu",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "medianoch": [
+    [
+        "arrojndon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desmay": [
+    [
+        "arrojndos",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "matndon": [
+    [
+        "asunt",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "echars": [
+    [
+        "ataron",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "mortecin": [
+    [
+        "atisb",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desarrollndos": [
+    [
+        "atraccin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dganm": [
+    [
+        "atragant",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desgan": [
+    [
+        "autobs",
         [
-            6,
-            1
+            [
+                6,
+                10
+            ]
         ]
     ],
-    "adam": [
+    [
+        "autoritari",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "quitndos": [
+    [
+        "ava",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "deambul": [
+    [
+        "avanc",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "apesadumbr": [
+    [
+        "avisndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "comunicacin": [
+    [
+        "bach",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "exalt": [
+    [
+        "ballen",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "torn": [
+    [
+        "barc",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "arras": [
+    [
+        "basndom",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "entristeci": [
+    [
+        "bastant",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "don": [
+    [
+        "bat",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "resuelv": [
+    [
+        "bautiz",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "estanter": [
+    [
+        "bland",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "grabndol": [
+    [
+        "bomb",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "exactitud": [
+    [
+        "borrach",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "petrific": [
+    [
+        "botn",
         [
-            6,
-            1
+            [
+                6,
+                4
+            ]
         ]
     ],
-    "crebl": [
+    [
+        "boton",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "verific": [
+    [
+        "brel",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "echart": [
+    [
+        "brum",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "despidi": [
+    [
+        "caballer",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "refugi": [
+    [
+        "cabl",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "borrach": [
+    [
+        "caen",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "resistir": [
+    [
+        "caern",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "depender": [
+    [
+        "calific",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "despedaz": [
+    [
+        "calmndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "huan": [
+    [
+        "capuch",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "hord": [
+    [
+        "carent",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dav": [
+    [
+        "catapult",
         [
-            6,
-            4
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dent": [
+    [
+        "cayeron",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "agitndos": [
+    [
+        "cayndol",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "suicidi": [
+    [
+        "celebr",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pual": [
+    [
+        "cerebral",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "tropel": [
+    [
+        "cetrin",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "revol": [
+    [
+        "chaparrn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "gras": [
+    [
+        "chof",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desbord": [
+    [
+        "cicln",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "agil": [
+    [
+        "cid",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sujtenl": [
+    [
+        "ciudad",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "deposit": [
+    [
+        "civilizacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "divn": [
+    [
+        "clmens",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "trajer": [
+    [
+        "coleg",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "calmndol": [
+    [
+        "colm",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "aplac": [
+    [
+        "column",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desmoronndos": [
+    [
+        "combust",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desaparecer": [
+    [
+        "comi",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "nocin": [
+    [
+        "compa",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "brum": [
+    [
+        "compact",
         [
-            6,
-            3
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "embud": [
+    [
+        "comparti",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "huracan": [
+    [
+        "compasin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "absorb": [
+    [
+        "complic",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cicln": [
+    [
+        "comprendern",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "torment": [
+    [
+        "compromet",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "torr": [
+    [
+        "comun",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "planici": [
+    [
+        "comunicacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "mrat": [
+    [
+        "conducir",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "jbil": [
+    [
+        "conductor",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "contestacin": [
+    [
+        "condujer",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "habert": [
+    [
+        "confesin",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "arrojndon": [
+    [
+        "consig",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "exam": [
+    [
+        "contestacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "repas": [
+    [
+        "contiend",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "proyeccin": [
+    [
+        "contin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "diaposit": [
+    [
+        "contradictori",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "avanc": [
+    [
+        "contribuy",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "retuv": [
+    [
+        "convenz",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "bastant": [
+    [
+        "convulsion",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ganador": [
+    [
+        "cortant",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sobrevivient": [
+    [
+        "cpsul",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "hogar": [
+    [
+        "crebl",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sensacion": [
+    [
+        "creern",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "justificacin": [
+    [
+        "crucial",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "promedi": [
+    [
+        "crueld",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "fragmentari": [
+    [
+        "cuest",
         [
-            6,
-            2
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "financi": [
+    [
+        "cuev",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "albert": [
+    [
+        "dart",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "einstein": [
+    [
+        "darwin",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "isaac": [
+    [
+        "dav",
         [
-            6,
-            1
+            [
+                6,
+                4
+            ]
         ]
     ],
-    "newton": [
+    [
+        "dbilment",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "edison": [
+    [
+        "deambul",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "hurfan": [
+    [
+        "debil",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "teric": [
+    [
+        "decayer",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "lograrn": [
+    [
+        "decrtel",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "extraterrestr": [
+    [
+        "defini",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "relat": [
+    [
+        "demacr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "contin": [
+    [
+        "demenci",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "reaccionb": [
+    [
+        "denomin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "comun": [
+    [
+        "densid",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "civilizacin": [
+    [
+        "dent",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "contribuy": [
+    [
+        "depender",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "alentndon": [
+    [
+        "deposit",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "usad": [
+    [
+        "derram",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "manipul": [
+    [
+        "desactiv",
         [
-            6,
-            1
+            [
+                6,
+                6
+            ]
         ]
     ],
-    "mantuvir": [
+    [
+        "desafortun",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desactiv": [
+    [
+        "desalm",
         [
-            6,
-            6
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "colm": [
+    [
+        "desaparecer",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "llevndon": [
+    [
+        "desaprovech",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "supervivent": [
+    [
+        "desarrollndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "apto": [
+    [
+        "desbord",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "escaparn": [
+    [
+        "descar",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "crucial": [
+    [
+        "descendent",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ganrnosl": [
+    [
+        "desgan",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dis": [
+    [
+        "desiert",
         [
-            6,
-            6
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "resbaladiz": [
+    [
+        "desmay",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "creern": [
+    [
+        "desmoronndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "expliqu": [
+    [
+        "desord",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "entender": [
+    [
+        "despedaz",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ladrn": [
+    [
+        "desperdici",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pest": [
+    [
+        "desperdicir",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "tosi": [
+    [
+        "despidi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pane": [
+    [
+        "desplegndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "carent": [
+    [
+        "destac",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "barc": [
+    [
+        "desv",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "someter": [
+    [
+        "devorart",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "confesin": [
+    [
+        "dganm",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "pospon": [
+    [
+        "diaposit",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "din": [
+    [
+        "diecinuev",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "destac": [
+    [
+        "diecioch",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "traidor": [
+    [
+        "dificultndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cuev": [
+    [
+        "dignid",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "arriesgu": [
+    [
+        "diluvi",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "salvart": [
+    [
+        "din",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "hir": [
+    [
+        "dis",
         [
-            6,
-            1
+            [
+                6,
+                6
+            ]
         ]
     ],
-    "relev": [
+    [
+        "discret",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "temibl": [
+    [
+        "discurs",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "envuelt": [
+    [
+        "dispersndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "prendi": [
+    [
+        "disposit",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "protegir": [
+    [
+        "dispus",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "decrtel": [
+    [
+        "divn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "rueg": [
+    [
+        "don",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "histric": [
+    [
+        "echarl",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "optim": [
+    [
+        "echars",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "caern": [
+    [
+        "echart",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pesim": [
+    [
+        "ecosistem",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "esperndon": [
+    [
+        "ecuador",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sabrn": [
+    [
+        "edison",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "etap": [
+    [
+        "einstein",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sacrific": [
+    [
+        "eleccin",
         [
-            6,
-            2
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "lob": [
+    [
+        "electrn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "suavid": [
+    [
+        "elevndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "espram": [
+    [
+        "eludi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "noblez": [
+    [
+        "embarc",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pierd": [
+    [
+        "embist",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "compasin": [
+    [
+        "embud",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "redim": [
+    [
+        "enarbol",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "persuad": [
+    [
+        "encastr",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "propus": [
+    [
+        "enfermiz",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "morirt": [
+    [
+        "enfurec",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "heroic": [
+    [
+        "enganch",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "convenz": [
+    [
+        "ennegreci",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "compa": [
+    [
+        "ensandos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "neutraliz": [
+    [
+        "entender",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "saqu": [
+    [
+        "enterarn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "bomb": [
+    [
+        "enterrndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "morir": [
+    [
+        "entrechoc",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "reprogram": [
+    [
+        "entristeci",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "aceptarn": [
+    [
+        "envidi",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "unindos": [
+    [
+        "envindosel",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "exig": [
+    [
+        "envuelt",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "asunt": [
+    [
+        "eplog",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "discret": [
+    [
+        "errand",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pongmon": [
+    [
+        "escaparn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desafortun": [
+    [
+        "escapndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "testarud": [
+    [
+        "escuchndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "compromet": [
+    [
+        "esenci",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "proporcional": [
+    [
+        "esfag",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "descar": [
+    [
+        "espej",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ataron": [
+    [
+        "esperndon",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "complic": [
+    [
+        "espiral",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cuest": [
+    [
+        "espram",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "embarc": [
+    [
+        "estacion",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sobrenombr": [
+    [
+        "estanter",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "darwin": [
+    [
+        "estarn",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "evolucin": [
+    [
+        "etap",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "comi": [
+    [
+        "evolucin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "levantndos": [
+    [
+        "exactitud",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "celebr": [
+    [
+        "exalt",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "avisndol": [
+    [
+        "exam",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "devorart": [
+    [
+        "exhibicin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "implant": [
+    [
+        "exig",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "amn": [
+    [
+        "expliqu",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "envidi": [
+    [
+        "extenu",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "atisb": [
+    [
+        "extiend",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "alzand": [
+    [
+        "extraordinari",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "discurs": [
+    [
+        "extraterrestr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "inest": [
+    [
+        "exuber",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "moral": [
+    [
+        "facial",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "inspiracin": [
+    [
+        "fas",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "llevarn": [
+    [
+        "fiar",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "vtor": [
+    [
+        "financi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "aplaus": [
+    [
+        "formacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "fundamental": [
+    [
+        "fraccin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "opon": [
+    [
+        "fragmentari",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "enarbol": [
+    [
+        "frut",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "impercept": [
+    [
+        "fundamental",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dificultndol": [
+    [
+        "funeral",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "resplandec": [
+    [
+        "futur",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "escuchndol": [
+    [
+        "ganador",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "grasos": [
+    [
+        "ganrnosl",
         [
-            6,
-            4
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "caballer": [
+    [
+        "garfi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "andant": [
+    [
+        "gelatin",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "influ": [
+    [
+        "gener",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "aayyy": [
+    [
+        "generacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "abrier": [
+    [
+        "giratori",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "propag": [
+    [
+        "golpendol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "infiltr": [
+    [
+        "grabndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "seguir": [
+    [
+        "gras",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "obligndol": [
+    [
+        "grasos",
         [
-            6,
-            1
+            [
+                6,
+                4
+            ]
         ]
     ],
-    "compact": [
+    [
+        "grazn",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "apretuj": [
+    [
+        "griter",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "tramp": [
+    [
+        "grupal",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "precari": [
+    [
+        "habert",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "sultam": [
+    [
+        "heroic",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ensandos": [
+    [
+        "hiel",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "regod": [
+    [
+        "hir",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "crueld": [
+    [
+        "historiet",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "rindi": [
+    [
+        "histric",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "inmol": [
+    [
+        "hogar",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desaprovech": [
+    [
+        "horcaj",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "inact": [
+    [
+        "hord",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "desalm": [
+    [
+        "huan",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "funeral": [
+    [
+        "huracan",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "revolvi": [
+    [
+        "hurfan",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "desperdicir": [
+    [
+        "identific",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "priorid": [
+    [
+        "iluminacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "consig": [
+    [
+        "imaginndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "gelatin": [
+    [
+        "impercept",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "unson": [
+    [
+        "impidindol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "formacin": [
+    [
+        "implant",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sacrifici": [
+    [
+        "implement",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "rodant": [
+    [
+        "implsat",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "interpon": [
+    [
+        "impotent",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pinchud": [
+    [
+        "improvis",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desv": [
+    [
+        "inact",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "brel": [
+    [
+        "inest",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "van": [
+    [
+        "infiltr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "conducir": [
+    [
+        "influ",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "apuntndol": [
+    [
+        "inmol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sangrient": [
+    [
+        "inspiracin",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "tropezon": [
+    [
+        "instantn",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "fraccin": [
+    [
+        "instruccion",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "autoritari": [
+    [
+        "interpon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dignid": [
+    [
+        "inusit",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "griter": [
+    [
+        "irguindos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "gener": [
+    [
+        "isaac",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "diluvi": [
+    [
+        "jbil",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "presionndol": [
+    [
+        "justificacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "plomiz": [
+    [
+        "ladrn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ballen": [
+    [
+        "lanzart",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "eludi": [
+    [
+        "lati",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "entrechoc": [
+    [
+        "levantndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "contiend": [
+    [
+        "leyend",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "errand": [
+    [
+        "liter",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "embist": [
+    [
+        "llag",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "improvis": [
+    [
+        "llamat",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "mxim": [
+    [
+        "llevarn",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "giratori": [
+    [
+        "llevndon",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cortant": [
+    [
+        "lluvi",
         [
-            6,
-            1
+            [
+                6,
+                5
+            ]
         ]
     ],
-    "caen": [
+    [
+        "lob",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "espej": [
+    [
+        "log",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sobrepon": [
+    [
+        "lograrn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pavor": [
+    [
+        "luchar",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "implsat": [
+    [
+        "madurez",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "armndos": [
+    [
+        "manipul",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "elevndos": [
+    [
+        "mantequill",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "catapult": [
+    [
+        "mantuvir",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "zambull": [
+    [
+        "martill",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ennegreci": [
+    [
+        "materializ",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "milagr": [
+    [
+        "matndon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "orientacin": [
+    [
+        "medianoch",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "tecl": [
+    [
+        "medit",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "palmendol": [
+    [
+        "memorndum",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ademn": [
+    [
+        "milagr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pantall": [
+    [
+        "ministr",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "bland": [
+    [
+        "miseri",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "acuos": [
+    [
+        "mojndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desplegndos": [
+    [
+        "molinet",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "apndic": [
+    [
+        "monitor",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "aprat": [
+    [
+        "monoton",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pose": [
+    [
+        "moral",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "garfi": [
+    [
+        "morir",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "potenci": [
+    [
+        "morirt",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "encastr": [
+    [
+        "mortecin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "profiri": [
+    [
+        "mrat",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "debil": [
+    [
+        "muri",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "patin": [
+    [
+        "mxim",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "sustanci": [
+    [
+        "naturalez",
         [
-            6,
-            4
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "salpic": [
+    [
+        "necesitb",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "restant": [
+    [
+        "neutraliz",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "combust": [
+    [
+        "newton",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "derram": [
+    [
+        "noblez",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "monitor": [
+    [
+        "nocin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "botn": [
+    [
+        "obligndol",
         [
-            6,
-            4
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "arrojndos": [
+    [
+        "observacin",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "enganch": [
+    [
+        "ocan",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "oprmel": [
+    [
+        "oh",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "disposit": [
+    [
+        "olvdat",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "retrajeron": [
+    [
+        "ondas",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "atragant": [
+    [
+        "opon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "abraz": [
+    [
+        "oprmel",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "necesitb": [
+    [
+        "optim",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "grupal": [
+    [
+        "opus",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "diecioch": [
+    [
+        "orientacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "veintin": [
+    [
+        "orme",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "irguindos": [
+    [
+        "paig",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "exhibicin": [
+    [
+        "palmendol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "opus": [
+    [
+        "pane",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ramp": [
+    [
+        "pantall",
         [
-            6,
-            4
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "descendent": [
+    [
+        "patin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "risot": [
+    [
+        "pavor",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "tobogn": [
+    [
+        "pegaj",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "condujer": [
+    [
+        "permitmon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pegaj": [
+    [
+        "persuad",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "esfag": [
+    [
+        "pesim",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "materializ": [
+    [
+        "pest",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "serpent": [
+    [
+        "petrific",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "espiral": [
+    [
+        "pierd",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "golpendol": [
+    [
+        "pinchud",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "miseri": [
+    [
+        "pistol",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "trech": [
+    [
+        "pizz",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "vislumbr": [
+    [
+        "planch",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "subterrne": [
+    [
+        "planici",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cabl": [
+    [
+        "plomiz",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cpsul": [
+    [
+        "pm",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "iluminacin": [
+    [
+        "pongmon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "column": [
+    [
+        "pose",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "enfurec": [
+    [
+        "pospon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "bat": [
+    [
+        "potenci",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "facial": [
+    [
+        "potent",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "tez": [
+    [
+        "pram",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cetrin": [
+    [
+        "precari",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "demacr": [
+    [
+        "preci",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "rasc": [
+    [
+        "prendi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "amplific": [
+    [
+        "preserv",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "reactiv": [
+    [
+        "presionndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "potent": [
+    [
+        "priorid",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "lati": [
+    [
+        "privac",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sideral": [
+    [
+        "profiri",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "boton": [
+    [
+        "profundiz",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "log": [
+    [
+        "promedi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "relacin": [
+    [
+        "pronostic",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sudader": [
+    [
+        "propag",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "capuch": [
+    [
+        "proporcional",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "tapndol": [
+    [
+        "propus",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "seor": [
+    [
+        "protegir",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "rendir": [
+    [
+        "proyeccin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "historiet": [
+    [
+        "pual",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "clmens": [
+    [
+        "pudir",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "alcald": [
+    [
+        "puebl",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "madurez": [
+    [
+        "quitndos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "estarn": [
+    [
+        "ramp",
         [
-            6,
-            1
+            [
+                6,
+                4
+            ]
         ]
     ],
-    "enfermiz": [
+    [
+        "rasc",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ahogndol": [
+    [
+        "rbit",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "grazn": [
+    [
+        "reaccionb",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "inusit": [
+    [
+        "reactiv",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "molinet": [
+    [
+        "reclut",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "testig": [
+    [
+        "recordarn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "hiel": [
+    [
+        "recurrent",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "impotent": [
+    [
+        "redim",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "enterrndos": [
+    [
+        "refugi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "tieron": [
+    [
+        "regod",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cid": [
+    [
+        "relacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "convulsion": [
+    [
+        "relat",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "rbit": [
+    [
+        "relev",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "aferrndos": [
+    [
+        "rendir",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "res": [
+    [
+        "repas",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "tos": [
+    [
+        "reprogram",
         [
-            6,
-            2
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "venganz": [
+    [
+        "res",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "dispersndos": [
+    [
+        "resbaladiz",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "cayeron": [
+    [
+        "resistir",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "horcaj": [
+    [
+        "resplandec",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "smbol": [
+    [
+        "restant",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "mantequill": [
+    [
+        "resuelv",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "amulet": [
+    [
+        "retrajeron",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "futur": [
+    [
+        "retuv",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "escapndos": [
+    [
+        "revol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "recurrent": [
+    [
+        "revolvi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "abrig": [
+    [
+        "ric",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pistol": [
+    [
+        "rifl",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "rifl": [
+    [
+        "rindi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "generacin": [
+    [
+        "risot",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "observacin": [
+    [
+        "rodant",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sganm": [
+    [
+        "rueg",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "instruccion": [
+    [
+        "rumor",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "salvador": [
+    [
+        "sabrn",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "zanc": [
+    [
+        "sacrific",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "anestesi": [
+    [
+        "sacrifici",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "dbilment": [
+    [
+        "salpic",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "electrn": [
+    [
+        "salvacin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "chaparrn": [
+    [
+        "salvador",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "vean": [
+    [
+        "salvars",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "autobs": [
+    [
+        "salvart",
         [
-            6,
-            10
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "ventanill": [
+    [
+        "sangrient",
         [
-            6,
-            4
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "lluvi": [
+    [
+        "saqu",
         [
-            6,
-            5
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "vehcul": [
+    [
+        "satisfactori",
         [
-            6,
-            6
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ocan": [
+    [
+        "satlit",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "agolp": [
+    [
+        "seguir",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desord": [
+    [
+        "sensacion",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "mojndol": [
+    [
+        "seor",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "densid": [
+    [
+        "serpent",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "impidindol": [
+    [
+        "sganm",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "llag": [
+    [
+        "sideral",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "supur": [
+    [
+        "sirvi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "salvars": [
+    [
+        "smbol",
         [
-            6,
-            3
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "martill": [
+    [
+        "sobrenombr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "volant": [
+    [
+        "sobrepon",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "demenci": [
+    [
+        "sobrevivient",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "conductor": [
+    [
+        "solar",
         [
-            6,
-            2
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "chof": [
+    [
+        "someter",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "puebl": [
+    [
+        "suavid",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ciudad": [
+    [
+        "subterrne",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "temerari": [
+    [
+        "sudader",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "acu": [
+    [
+        "sudamr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "andraj": [
+    [
+        "suicidi",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "cayndol": [
+    [
+        "sujtenl",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "alentndol": [
+    [
+        "sultam",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "solar": [
+    [
+        "supervivent",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pronostic": [
+    [
+        "supur",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "satlit": [
+    [
+        "sustanci",
         [
-            6,
-            1
+            [
+                6,
+                4
+            ]
         ]
     ],
-    "instantn": [
+    [
+        "tapndol",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pram": [
+    [
+        "tecl",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "ecosistem": [
+    [
+        "telepat",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "sudamr": [
+    [
+        "temerari",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "bautiz": [
+    [
+        "temibl",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ric": [
+    [
+        "teric",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "rumor": [
+    [
+        "testarud",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "andes": [
+    [
+        "testig",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ondas": [
+    [
+        "tez",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "cerebral": [
+    [
+        "tieron",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "naturalez": [
+    [
+        "tobogn",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "esenci": [
+    [
+        "tocador",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "luchar": [
+    [
+        "torment",
         [
-            6,
-            1
+            [
+                6,
+                3
+            ]
         ]
     ],
-    "enterarn": [
+    [
+        "torn",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "denomin": [
+    [
+        "torr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "desiert": [
+    [
+        "tos",
         [
-            6,
-            2
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "extiend": [
+    [
+        "tosi",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "ecuador": [
+    [
+        "toxin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "salvacin": [
+    [
+        "traicion",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "unan": [
+    [
+        "traidor",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "contradictori": [
+    [
+        "trajer",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "identific": [
+    [
+        "tramp",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "medit": [
+    [
+        "trech",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "bach": [
+    [
+        "tropel",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "estacion": [
+    [
+        "tropezon",
         [
-            6,
-            1
+            [
+                6,
+                2
+            ]
         ]
     ],
-    "llamat": [
+    [
+        "unan",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "diecinuev": [
+    [
+        "unindos",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "liter": [
+    [
+        "unson",
         [
-            6,
-            2
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "monoton": [
+    [
+        "usad",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "defini": [
+    [
+        "van",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "traicion": [
+    [
+        "vean",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "planch": [
+    [
+        "vehcul",
         [
-            6,
-            1
+            [
+                6,
+                6
+            ]
         ]
     ],
-    "tocador": [
+    [
+        "veintin",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "sirvi": [
+    [
+        "venganz",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "pizz": [
+    [
+        "ventanill",
         [
-            6,
-            2
+            [
+                6,
+                4
+            ]
         ]
     ],
-    "comparti": [
+    [
+        "verific",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "basndom": [
+    [
+        "vislumbr",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "atraccin": [
+    [
+        "volant",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "olvdat": [
+    [
+        "vtor",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "muri": [
+    [
+        "zambull",
         [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ],
-    "eleccin": [
+    [
+        "zanc",
         [
-            6,
-            2
-        ]
-    ],
-    "desperdici": [
-        [
-            6,
-            1
-        ]
-    ],
-    "eplog": [
-        [
-            6,
-            1
-        ]
-    ],
-    "memorndum": [
-        [
-            6,
-            1
-        ]
-    ],
-    "pm": [
-        [
-            6,
-            1
-        ]
-    ],
-    "coleg": [
-        [
-            6,
-            1
-        ]
-    ],
-    "ministr": [
-        [
-            6,
-            1
-        ]
-    ],
-    "ava": [
-        [
-            6,
-            1
-        ]
-    ],
-    "paig": [
-        [
-            6,
-            1
-        ]
-    ],
-    "calific": [
-        [
-            6,
-            1
-        ]
-    ],
-    "satisfactori": [
-        [
-            6,
-            1
-        ]
-    ],
-    "absteng": [
-        [
-            6,
-            1
-        ]
-    ],
-    "reclut": [
-        [
-            6,
-            2
-        ]
-    ],
-    "recordarn": [
-        [
-            6,
-            1
-        ]
-    ],
-    "comprendern": [
-        [
-            6,
-            1
-        ]
-    ],
-    "preserv": [
-        [
-            6,
-            1
-        ]
-    ],
-    "preci": [
-        [
-            6,
-            1
-        ]
-    ],
-    "implement": [
-        [
-            6,
-            1
-        ]
-    ],
-    "fas": [
-        [
-            6,
-            1
-        ]
-    ],
-    "permitmon": [
-        [
-            6,
-            1
-        ]
-    ],
-    "extraordinari": [
-        [
-            6,
-            1
-        ]
-    ],
-    "abord": [
-        [
-            6,
-            1
+            [
+                6,
+                1
+            ]
         ]
     ]
-}
+]

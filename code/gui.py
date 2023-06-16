@@ -115,7 +115,7 @@ class GUI:
         
         # PSQL TIME!
         start_time = time.perf_counter()
-        self.pg_results = pg_querier.search_query(self.query,self.top_k) # looks like [(int: id,float: tf-idf normalized score)]
+        #self.pg_results = pg_querier.search_query(self.query,self.top_k) # looks like [(int: id,float: tf-idf normalized score)]
         self.pg_query_time = round(time.perf_counter() - start_time,5)
         self.render_interface()
 

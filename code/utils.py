@@ -41,16 +41,19 @@ def calculate_tf_idf(frequency, document_frequency, total_documents):
 
     return tf * idf
 
+def calculate_idf(document_frequency,total_documents):
+    return math.log10(1 + (total_documents / document_frequency))
+
 def write_to_disk_with_tfidf(inverted_index, filename, total_documents):
     with open(filename, 'w') as file:
         for term, postings in inverted_index.items():
             document_frequency = len(postings)
-            file.write(f"{term}: ")
+            file.write(f"{term}:{calculate_idf(document_frequency, total_documents)}:")
             for posting in postings:
                 document_id = posting[0]
                 term_frequency = posting[1]
                 tfidf = calculate_tf_idf(term_frequency, document_frequency, total_documents)
-                file.write(f"[{document_id}, {tfidf}], ")
+                file.write(f"{document_id},{tfidf}; ")
             file.write("\n")
 
 def write_to_disk(inverted_index, filename):
@@ -94,24 +97,35 @@ def count_terms():
 
 # ----- MERGE ------
 
+"""
+-- Ordered dict info
+
+Time Complexity:
+- Get item(Key): O(1)
+- Set item(key, value): O(1)
+- Delete item(key): O(n)
+- Iteration: O(n)
+- Space Complexity: O(n)
+
+Ordered dict in Python version 2.7 consumes more memory than normal dict.
+ This is due to the underlying Doubly Linked List implementation for keeping the order.
+Starting from Python 3.7, insertion order of Python dictionaries is guaranteed.
+"""
+
 def merge_blocks(block1, block2):
 
     # Merge two blocks by merging the lists for duplicate words and sorting the postings
-
+    #print(f"Lengths (block1: {len(block1)}, block2: {len(block2)})")
     merged_block = OrderedDict()
     for block in [block1, block2]:
         for word, postings in block.items():
+            #print(word, postings)
             if word in merged_block:
                 merged_block[word] += postings
             else:
                 merged_block[word] = postings
 
-    sorted_block = OrderedDict()
-    for word, postings in merged_block.items():
-        sorted_postings = sorted(postings, key=lambda x: x[0])  # Sort the postings based on document ID
-        sorted_block[word] = sorted_postings
-
-    sorted_block = OrderedDict(sorted(sorted_block.items(), key=lambda x: x[0]))  # Sort the block by word
+    sorted_block = OrderedDict(sorted(merged_block.items(), key=lambda x: x[0]))  # Sort the block by word
 
     return sorted_block
 
