@@ -106,7 +106,7 @@ class PG:
         """
         
         #sanitize topk
-
+        print('[INFO] Searching Postgres')
         try:
             topk = int(topk)
         except:

@@ -33,21 +33,46 @@ class SPIMI:
         for term in query_terms:
             term_frequency[term] += 1
 
-        # ---- COSINE DISTANCE ----
+        
+        # ---- COSINE DISTANCE ---- | Scoring
+
+        query_pow2_len = 0 #so it does not cause zerodiv in case no term inside it exists in the corpus
+        docs_pow2_lens = defaultdict(float)
+        
         with open("../spimi_inverted_index.txt") as index_file:
-            inverted_index = json.load(index_file)
-            
-        for term in query_terms:
-            if term in inverted_index:
-                postings = inverted_index[term]
-                for posting in postings:
-                    doc_id, tf_idf = posting.split(":")
-                    weights[doc_id] += term_frequency[term] * float(tf_idf)
+            for line in index_file.readlines():
+                term, idf, wlist = self.processIndexLine(line)
+
+                query_tf_idf = math.log10(1+term_frequency[term])*idf #tf_idf query
+                query_pow2_len += query_tf_idf**2 #for normalization purposes. It is valid to ignore all terms 
+                                                 # in the query that are not in the corpus because their idf would be zero
+                for i in wlist:
+                    if query_tf_idf != 0:
+                        print(term)
+                    docs_pow2_lens[i[0]] += i[1]**2 #for normalization purposes
+                    weights[i[0]] += i[1]*query_tf_idf #dot product itself
+        print(weights,docs_pow2_lens,query_pow2_len)
+        for i in weights:
+            weights[i] = weights[i]/(math.sqrt(docs_pow2_lens[i])*math.sqrt(query_pow2_len))
 
         results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
         results = results[:int(top_k)]
 
         return results
+
+    def processIndexLine(self,line):
+        splitted = line.split(":")
+
+        term = splitted[0]
+        idf =  float(splitted[1])
+        
+        term_tfidf_list_str = splitted[2].split(';')[:-1]
+        term_tf_idf_list = []
+        for i in term_tfidf_list_str:
+            term_tf_idf_list.append((int(i.split(',')[0]),float(i.split(',')[1])))
+        return term, idf, term_tf_idf_list
+        
+        
 
     def index_documents(self, documents):
         """
