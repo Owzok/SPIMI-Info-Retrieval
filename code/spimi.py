@@ -16,52 +16,37 @@ class SPIMI:
         self.BLOCK_SIZE = 30000
         self.interval = 500
 
+
     def search_query(self, query, documents, top_k):
         # if index exists don't build another one
         if not os.path.isfile('../spimi_inverted_index.txt'):
             print("[INFO] Creating Index. Hold on...")
             self.index_documents(documents)
-        
 
         query_terms = preprocess({'text': query})
 
-        #self.inverted_index = generate_index()
-
         term_frequency = defaultdict(int)
+        weights = defaultdict(float)
 
         # ---- QUERY ----
-        # Get term frecuency
+        # Get term frequency
         for term in query_terms:
             term_frequency[term] += 1
 
-        weights = defaultdict(float)
-        
         # ---- COSINE DISTANCE ----
         with open("../spimi_inverted_index.txt") as index_file:
-            for line in index_file.readlines():
-                #get the term and counts for all 
-                term = line.split(":")[0]
+            inverted_index = json.load(index_file)
+            
+        for term in query_terms:
+            if term in inverted_index:
+                postings = inverted_index[term]
+                for posting in postings:
+                    doc_id, tf_idf = posting.split(":")
+                    weights[doc_id] += term_frequency[term] * float(tf_idf)
 
-                # TODO:
-                #todo esto es estupidiiiisimo por muchos motivos
-                #1: estamos recorriendo el indice entero en cada query. Podriamos no hacerlo. este es el todo
-                #2: estamos leyendo texto que se interpreta como codigo lo que es ESTUPIDO, y jamas deberia hacerse en produccion!!
-                #3: procesar cosas con AST demora lo que demora compilar codigo: POR QUE CAR**O ESO ES ALGO QUE TENGO QUE HACER???
-                #4: toda la ineficiencia esta en un bucle: pasar de un tipo de dato a otro, TODITO!!!
-
-                # @Martin, has forzado mi mano a cometer sacrilegio. Odio todo
-
-                if term in query_terms:
-                    lista = ast.literal_eval("["+line.split(":")[1].strip()+"]")
-                    print(lista)
-                    for tf_idf in lista:
-                        print(tf_idf)
-                        weights[tf_idf[0]] += term_frequency[term]*tf_idf[1];
         results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
-        try:
-            results = results[:int(top_k)]
-        except:
-            pass
+        results = results[:int(top_k)]
+
         return results
 
     def index_documents(self, documents):

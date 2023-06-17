@@ -113,17 +113,23 @@ Starting from Python 3.7, insertion order of Python dictionaries is guaranteed.
 """
 
 def merge_blocks(block1, block2):
+    # Convert block1 and block2 to dictionaries
+    block1_dict = dict(block1)
+    block2_dict = dict(block2)
 
-    # Merge two blocks by merging the lists for duplicate words and sorting the postings
-    #print(f"Lengths (block1: {len(block1)}, block2: {len(block2)})")
+    # Merge two blocks by merging the dictionaries for duplicate words and sorting the postings
     merged_block = OrderedDict()
-    for block in [block1, block2]:
-        for word, postings in block.items():
-            #print(word, postings)
-            if word in merged_block:
-                merged_block[word] += postings
-            else:
-                merged_block[word] = postings
+    for word, postings in block1_dict.items():
+        if word in merged_block:
+            merged_block[word] += postings
+        else:
+            merged_block[word] = postings
+
+    for word, postings in block2_dict.items():
+        if word in merged_block:
+            merged_block[word] += postings
+        else:
+            merged_block[word] = postings
 
     sorted_block = OrderedDict(sorted(merged_block.items(), key=lambda x: x[0]))  # Sort the block by word
 
