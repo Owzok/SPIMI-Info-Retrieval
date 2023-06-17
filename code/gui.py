@@ -12,7 +12,7 @@ if os.getcwd()[-5:-1] != "code":
 
 documents = read_txt_files("../documents/")
 spimi = SPIMI()
-pg_querier = PG("bd2_proyecto","postgres","prochazka")
+pg_querier = PG("bd2_proyeco","postgres","prochazka")
 class GUI:
     def __init__(self):
         pygame.init()

@@ -3,6 +3,8 @@ import linecache
 import ast
 from operator import itemgetter
 
+ZERO_TRESHOLD = 0.000001
+
 class SPIMI:
     def __init__(self):
         """ 
@@ -36,7 +38,7 @@ class SPIMI:
         
         # ---- COSINE DISTANCE ---- | Scoring
 
-        query_pow2_len = 0 #so it does not cause zerodiv in case no term inside it exists in the corpus
+        query_pow2_len = 0 
         docs_pow2_lens = defaultdict(float)
         
         with open("../spimi_inverted_index.txt") as index_file:
@@ -51,9 +53,11 @@ class SPIMI:
                         print(term)
                     docs_pow2_lens[i[0]] += i[1]**2 #for normalization purposes
                     weights[i[0]] += i[1]*query_tf_idf #dot product itself
-        print(weights,docs_pow2_lens,query_pow2_len)
+
         for i in weights:
-            weights[i] = weights[i]/(math.sqrt(docs_pow2_lens[i])*math.sqrt(query_pow2_len))
+            #to cull weird values introduced via ieee 774 errors
+            if (query_pow2_len > ZERO_TRESHOLD and weights[i] > ZERO_TRESHOLD and weights[i] > ZERO_TRESHOLD):
+                weights[i] = weights[i]/(math.sqrt(docs_pow2_lens[i])*math.sqrt(query_pow2_len))
 
         results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
         results = results[:int(top_k)]

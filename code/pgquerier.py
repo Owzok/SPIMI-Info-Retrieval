@@ -118,9 +118,13 @@ class PG:
             ORDER BY rank DESC
             LIMIT %s;
         """
-        conn = self.getConnection()
-        cur = conn.cursor()
-        cur.execute(query_sql,[query,topk])
-        results = cur.fetchall()
-        conn.close()
+        results = []
+        try:
+            conn = self.getConnection()
+            cur = conn.cursor()
+            cur.execute(query_sql,[query,topk])
+            results = cur.fetchall()
+            conn.close()
+        except:
+            results = [('Could not connect to Postgres', 0)]
         return results
