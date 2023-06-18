@@ -57,19 +57,22 @@ Right now the documents include a summary of "The lord of the Rings: The Fellows
 
 2. Update the ```main.py``` file with the appropriate configuration parameters and paths to your document collection.
 
-3. Change the directory to the main location:
+3. Create an empty database in your postgreSQL and fill in line 15 in ```gui.py```:
+   ```pg_querier = PG("<your-db-name>","<your-user>","<your-user-password>")```
+
+4. Change the directory to the main location:
 
 ```sh
 cd 'code'
 ```
 
-4. Run the ```main.py``` script to run the program:
+5. Run the ```main.py``` script to run the program:
 
 ```sh
 python main.py
 ```
 
-5. After attempting a search, the index is built, you can perform queries on the indexed documents using the provided query interface.
+6. After attempting a search, the index is built, you can perform queries on the indexed documents using the provided query interface.
 
 <p align="center"><img src="./others/gui.png" width=500></p>  
 
