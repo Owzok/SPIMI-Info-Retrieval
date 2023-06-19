@@ -98,8 +98,7 @@ Postgres exhibits a very fast search performance against our solution. We can ea
 
 <p align="center"><img src="./others/log_performance.jpg" width=500></p>  
 
-## License
-Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more information.
+# Description
 
 ## *Data Domain Description*
 
@@ -161,3 +160,6 @@ Block fusion: After processing all the documents, the inverted index blocks stor
 Query normalization: We normalize the queries before executing the search. Applying a pre-processing process that includes tokenization and the calculation of term frequencies.
 
 Cosine distance similarity calculation: The cosine distance similarity calculation is used to assign weights to documents based on their relevance to the query.
+
+## License
+Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more information.
