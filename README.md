@@ -105,8 +105,13 @@ Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more informati
 ### Data Domain Description (DDD)
 
 *Data type*: Tweets in JSON format contain text (for the content of the tweet) and a unique identifier id after data cleaning.
+
 *Data structure*: Tweets in JSON format usually contain several fields, such as "id" (tweet unique identifier), "created_at" (creation date and time), "text" (tweet content), "user" ( information of the user who published the tweet), "entities" (information about hashtags, mentions, links, etc.), among others.
+
 *Fields and attributes*: Each field in the tweet has a specific meaning. For example, the "id" field stores the unique identifier of the tweet, the "text" field contains the content of the tweet.
+
 *Relationships between data*: In the context of tweets, relationships may exist between the users mentioned, the hashtags used, the replies or retweets made to other tweets, etc.
+
 *Restrictions and rules*: There may be specific restrictions and rules on the tweet data, such as the maximum length of the tweet content, the mandatory nature of certain fields, or the validity of certain values, such as valid user IDs or hashtags.
+
 *Meaning and context*: In the data domain description, it is useful to provide contextual information about the usage of the tweets.
