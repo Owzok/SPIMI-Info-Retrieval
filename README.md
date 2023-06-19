@@ -101,9 +101,7 @@ Postgres exhibits a very fast search performance against our solution. We can ea
 ## License
 Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more information.
 
-## Report
-
-### Data Domain Description
+# Data Domain Description
 
 *Data type*: Tweets in JSON format contain text (for the content of the tweet) and a unique identifier id after data cleaning.
 
