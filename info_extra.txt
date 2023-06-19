@@ -1,0 +1,23 @@
+Se testeo con los documentos en documents_tested.
+Para realizar una prueba asegurese de que los archivos isam_index.txt, spimi_inverted_index.txt y already_indexed.flag han sido eliminados.
+Recuerde actualizar las credenciales de su base de datos local en la linea 13 de gui.py
+
+A continuacion se muestran los datos recolectados en bruto:
+
+Datos de busqueda:
+
+qty 	Our	Postgres
+2.912	0,05601	0,05490
+9.699	0,19303	0,06235
+21.499	0,43147	0,06219
+64.731	1,52757	0,09939
+133.281	3,25588	0,11742
+
+Datos de indexacion:
+
+cantidad   ours    postgres
+2912      2.36584   0.71035
+9699      8.33735   1.39759
+21499     18.60046  2.77877
+64731     57.22518  7.49331
+

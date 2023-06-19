@@ -90,7 +90,7 @@ class SPIMI:
                     for line in x:
                         doc_id = line['id']
                         self.amount_documents += 1
-                        print(line['id'])
+                        #print(line['id'])
                         terms = preprocess(line)
                         term_frequency = defaultdict(int)
 

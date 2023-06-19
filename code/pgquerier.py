@@ -1,5 +1,7 @@
 import psycopg2
 import utils
+import json
+import os
 TEST = True
 
 
@@ -53,7 +55,7 @@ class PG:
 
         query = """
         CREATE TABLE textos (
-            id INTEGER,
+            id BIGINT,
             text_body text,
             text_vector tsvector
         );
@@ -65,10 +67,7 @@ class PG:
         return
 
 
-    def index_documents(self,documents):
-        """
-        documents: list of dict-like elements containing a 'text' field to be indexed
-        """
+    def index_documents(self):
 
         query = """
         INSERT INTO textos VALUES ( %s, %s, NULL);
@@ -77,19 +76,19 @@ class PG:
         # Idea is to create schema and load all the documents into postgres
         if not (self.db_exists()):
             self.create_schema()
-        try:
-            conn = self.getConnection()
-            cur = conn.cursor()
-            for i, entry in enumerate(documents):
-                cur.execute(query,(i,entry['text']))
 
-            #then have postgres do the tsvector calculation
-            cur.execute("UPDATE textos SET text_vector=to_tsvector('spanish',text_body);")
-            cur.execute("CREATE INDEX idxTextosText_vectorGin ON textos USING GIN (text_vector);")
-            conn.commit()
-        except:
-            conn.rollback()
-            raise Exception("[ERROR] Could not insert documents")
+        conn = self.getConnection()
+        cur = conn.cursor()
+        for i in utils.get_files_from_folder("../documents"):
+            with open(i) as file:
+                js = json.load(file)
+                for j in js:
+
+                    cur.execute(query,(j["id"],j["text"]))
+        #then have postgres do the tsvector calculation
+        cur.execute("UPDATE textos SET text_vector=to_tsvector('spanish',text_body);")
+        cur.execute("CREATE INDEX idxTextosText_vectorGin ON textos USING GIN (text_vector);")
+        conn.commit()
         conn.close()
         return
 
@@ -104,7 +103,14 @@ class PG:
 
         return value: list of tuples: (id, score)
         """
-        
+
+        if not os.path.isfile('../already_indexed.flag'):
+            self.index_documents()
+            with open("../already_indexed.flag", "w+") as a:
+                a.write("opened")
+
+
+
         #sanitize topk
         print('[INFO] Searching Postgres')
         try:
@@ -119,12 +125,16 @@ class PG:
             LIMIT %s;
         """
         results = []
-        try:
-            conn = self.getConnection()
-            cur = conn.cursor()
-            cur.execute(query_sql,[query,topk])
-            results = cur.fetchall()
-            conn.close()
-        except:
-            results = [('Could not connect to Postgres', 0)]
+
+        conn = self.getConnection()
+        cur = conn.cursor()
+        cur.execute(query_sql,[query,topk])
+        results = cur.fetchall()
+        conn.close()
+
         return results
+
+
+if __name__ == "__main__":
+    pg_querier = PG("bd2_proyecto","postgres","prochazka")
+    pg_querier.index_documents()
