@@ -161,5 +161,5 @@ Query normalization: We normalize the queries before executing the search. Apply
 
 Cosine distance similarity calculation: The cosine distance similarity calculation is used to assign weights to documents based on their relevance to the query.
 
-## License
+# License
 Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more information.
