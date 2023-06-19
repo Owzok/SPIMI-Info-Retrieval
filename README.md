@@ -101,6 +101,7 @@ Postgres exhibits a very fast search performance against our solution. We can ea
 ## License
 Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more information.
 
+## Report
 
 ### Data Domain Description (DDD)
 
@@ -115,3 +116,29 @@ Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more informati
 *Restrictions and rules*: There may be specific restrictions and rules on the tweet data, such as the maximum length of the tweet content, the mandatory nature of certain fields, or the validity of certain values, such as valid user IDs or hashtags.
 
 *Meaning and context*: In the data domain description, it is useful to provide contextual information about the usage of the tweets.
+
+### Backend
+
+## *Construction of the inverted index*: 
+
+### def search_query():
+First, it checks if the file exists, preprocesses the query with the preprocesses function, initializes a dictionary called term_frequency that stores the frequency of each term. Then, the tf_idf is calculated, which is the quotient of the frequency of the term and the total number of documents. A list called weight_list is created that stores the weights of each term for each document. If a match is found, the pair (document identifier, term weight) is added to weight_list. If there is no match, a pair (document identifier, 0.0) is added to indicate that the term is not present in that document.
+The weights for all terms and documents are sorted, then the result list is trimmed to get the top_k top results. Finally, the sorted results will be returned.
+
+### def processIndexLine():
+It splits the line into parts separated by the ":" character and stores the results in a list called 'splitted', assigning the first element of the 'splitted' list to the variable 'term'. We then convert the second element of the 'splitted' list to a floating point number and assign it to the 'idf' variable.
+We take the third element of the 'splitted' list, split it into substrings separated by the ';' character, and store the results in a list called 'term_tf_idf_list_str'. Using [:-1] removes the last element of the list, which is empty. An empty list 'term_tf_idf_list' is created which will be used to store pairs of values.
+The for loop iterates over each element in the 'term_tfidf_list_str' list and performs various split operations by splitting the substrings.
+Finally, the function returns three values: 'term', 'idf', and 'term_tf_idf_list'. 'term' contains the first part of the line, 'idf' contains the second element converted to a floating point number, and 'term_tf_idf_list' contains a list of tuples representing the term and tf-idf values ​​extracted from the line of entrance.
+This function processes an input line in a specific format and extracts relevant information from it for later use or storage.
+
+### def index_documents():
+The path of the folder where the documents to be indexed are located is established. Open each document file in read mode using a 'with' statement. Reads the content of the file as a JSON object and stores it in the 'x' variable. It extracts the document id from the current line and stores it in the 'doc_id' variable. We increased the counter for the number of indexed documents. The current line is processed using a function called preprocess, it is stored in the 'terms' variable.
+The code iterates over each term and frequency in term_frequency using the for term, frequency in term_frequency.items(): loop.
+After iterating over all lines and terms in a document, self.inverted_index is checked to see if it contains elements. If so, it means that there is data remaining in the self.inverted_index dictionary that has not yet been written to disk. In this case, the process of ordering and writing the block to disk is repeated.
+The function merge_all_blocks is called, which takes as its argument a list of block files located in the "../blocks/" folder and combines all the blocks into a single merged-index block. Finally, we call a build_isam_index() method on the current object, which builds an Indexed Sequential Access Method (ISAM) index based on the generated inverted index.
+In simple accounts, it traverses a list of text documents, processes and counts the terms in each document, writes the inverted index blocks to disk, and finally generates a merged inverted index and corresponding ISAM index.
+
+### def build_isam_index():
+Create the 'ISAM' index learned in the previous unit of the course.
+Reads the inverted index file line by line, builds an ISAM index based on a specified range of lines, and creates a new ISAM index file that maps each term to its offset in bytes in the inverted index file.
