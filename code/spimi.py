@@ -17,13 +17,13 @@ class SPIMI:
         # it's in kilobytes, when size is reached, writes the block
         self.BLOCK_SIZE = 30000
         self.interval = 500
+        self.amount_documents = 0
 
-
-    def search_query(self, query, documents, top_k):
+    def search_query(self, query, top_k):
         # if index exists don't build another one
         if not os.path.isfile('../spimi_inverted_index.txt'):
             print("[INFO] Creating Index. Hold on...")
-            self.index_documents(documents)
+            self.index_documents()
 
         query_terms = preprocess({'text': query})
 
@@ -49,8 +49,8 @@ class SPIMI:
                 query_pow2_len += query_tf_idf**2 #for normalization purposes. It is valid to ignore all terms 
                                                  # in the query that are not in the corpus because their idf would be zero
                 for i in wlist:
-                    if query_tf_idf != 0:
-                        print(term)
+                    #if query_tf_idf != 0:
+                        #print(term)
                     docs_pow2_lens[i[0]] += i[1]**2 #for normalization purposes
                     weights[i[0]] += i[1]*query_tf_idf #dot product itself
 
@@ -60,6 +60,8 @@ class SPIMI:
                 weights[i] = weights[i]/(math.sqrt(docs_pow2_lens[i])*math.sqrt(query_pow2_len))
 
         results = sorted(weights.items(), key=lambda x: x[1], reverse=True)
+        if top_k == "":
+            top_k = "5"
         results = results[:int(top_k)]
 
         return results
@@ -76,39 +78,42 @@ class SPIMI:
             term_tf_idf_list.append((int(i.split(',')[0]),float(i.split(',')[1])))
         return term, idf, term_tf_idf_list
         
-        
+    def index_documents(self):
+            """
+            documents is a list of dict-like objects with a field for all the text in a document
+            """
+            documents_path = "../documents"
+            documents = os.listdir(documents_path)
+            for doc_name in documents:
+                with open(documents_path + "/" + doc_name) as file:
+                    x = json.load(file)    
+                    for line in x:
+                        doc_id = line['id']
+                        self.amount_documents += 1
+                        print(line['id'])
+                        terms = preprocess(line)
+                        term_frequency = defaultdict(int)
 
-    def index_documents(self, documents):
-        """
-        documents is a list of dict-like objects with a field for all the text in a document
-        """
-        for doc_id, document in enumerate(documents):       
-            terms = preprocess(document)           #terms is a list of all terms on this dicument
-            term_frequency = defaultdict(int)
+                        for term in terms:
+                            term_frequency[term] += 1
 
-            for term in terms:                              # Get frequency of each word for this document
-                term_frequency[term] += 1
+                        for term, frecuency in term_frequency.items():
+                            if sys.getsizeof(self.inverted_index) > self.BLOCK_SIZE:
+                                sorted_blocks = sorted(self.inverted_index.items(), key=itemgetter(0))  # Sort blocks by term
+                                write_to_disk(sorted_blocks, f"../blocks/block-{self.block}.txt")
+                                self.inverted_index.clear()
+                                self.block += 1
+                            self.inverted_index[term].append((doc_id, frecuency))
 
-            for term, frequency in term_frequency.items():
-                if sys.getsizeof(self.inverted_index) > self.BLOCK_SIZE:
-                    sorted_blocks = sorted(self.inverted_index.items(), key=itemgetter(0))  # Sort blocks by term
-                    write_to_disk(sorted_blocks, f"../blocks/block-{self.block}.txt")
-                    self.inverted_index.clear()
-                    self.block += 1
+                    if self.inverted_index:                             # Write another block if inverted index isn't empty
+                        sorted_blocks = sorted(self.inverted_index.items(), key=itemgetter(0))  # Sort blocks by term
+                        write_to_disk(sorted_blocks, f"../blocks/block-{self.block}.txt")
+                        self.inverted_index.clear()                      
 
-                self.inverted_index[term].append((doc_id, frequency))
-
-        if self.inverted_index:                             # Write another block if inverted index isn't empty
-            sorted_blocks = sorted(self.inverted_index.items(), key=itemgetter(0))  # Sort blocks by term
-            write_to_disk(sorted_blocks, f"../blocks/block-{self.block}.txt")
-            self.inverted_index.clear()
-                                                            # Apply merge sort
-        #merged block is OrderedDict looking like {term:[(doc1,count1),(doc2,count2)...]}
-        merged_block = merge_all_blocks(get_files_from_folder("../blocks/")) 
-                                                            # Write main index
-        write_to_disk_with_tfidf(merged_block, "../spimi_inverted_index.txt", 6)
-        self.build_isam_index()
-        return
+            merged_block = merge_all_blocks(get_files_from_folder("../blocks/")) 
+                                                                # Write main index
+            write_to_disk_with_tfidf(merged_block, "../spimi_inverted_index.txt", self.amount_documents)
+            self.build_isam_index()
 
     def build_isam_index(self):
         """

@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+blocks/
+spimi_inverted_index.txt
+
 # C extensions
 *.so
 
