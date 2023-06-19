@@ -101,7 +101,7 @@ Postgres exhibits a very fast search performance against our solution. We can ea
 ## License
 Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more information.
 
-# Data Domain Description
+## *Data Domain Description*
 
 *Data type*: Tweets in JSON format contain text (for the content of the tweet) and a unique identifier id after data cleaning.
 
@@ -115,9 +115,9 @@ Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more informati
 
 *Meaning and context*: In the data domain description, it is useful to provide contextual information about the usage of the tweets.
 
-### Backend
+# Backend
 
-# *Construction of the inverted index*: 
+## *Construction of the inverted index*: 
 
 ### def search_query():
 First, it checks if the file exists, preprocesses the query with the preprocesses function, initializes a dictionary called term_frequency that stores the frequency of each term. Then, the tf_idf is calculated, which is the quotient of the frequency of the term and the total number of documents. A list called weight_list is created that stores the weights of each term for each document. If a match is found, the pair (document identifier, term weight) is added to weight_list. If there is no match, a pair (document identifier, 0.0) is added to indicate that the term is not present in that document.
@@ -141,7 +141,7 @@ In simple accounts, it traverses a list of text documents, processes and counts 
 Create the 'ISAM' index learned in the previous unit of the course.
 Reads the inverted index file line by line, builds an ISAM index based on a specified range of lines, and creates a new ISAM index file that maps each term to its offset in bytes in the inverted index file.
 
-# *Secondary Memory Management*
+## *Secondary Memory Management*
 Secondary memory is managed using long-term storage and access techniques, such as disk storage. In the provided code, files on disk are used to store the inverted index and data blocks.
 
 In the index_documents method, each document in the '../documents' directory is read and processed line by line. If the size of the inverted index in memory (self.inverted_index) exceeds the specified limit size (self.BLOCK_SIZE), the current block is written to a file on disk using the 'write_to_disk' function. After writing the block, the inverted index in memory is cleared and the block number (self.block) is incremented. This disk writing process is repeated until all documents are processed.
@@ -150,7 +150,7 @@ Once all the documents have been processed, all the blocks stored on disk are me
 
 In the build_isam_index method, the file ‘../spimi_inverted_index.txt’ is read and an ISAM (Indexed Sequential Access Method) index is created in the file ‘../isam_index.txt’. The ISAM index is built by recording the byte offset of each line in the inverted index file. This allows for more efficient access to specific lines of the inverted index file when performing a search.
 
-# *Optimal query execution*
+## *Optimal query execution*
 
 Inverted Index: The inverted index is used to speed up the search for terms in documents.
 
