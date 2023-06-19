@@ -49,6 +49,8 @@ git clone https://github.com/your-username/spimi-index-project.git
 pip install -r requirements.txt
 ```
 
+3. Create a folder in named "blocks" in th top level of the project.
+
 ## Documents
 The documents to be indexed are tweets collected from 07-08-2018 to 03-05-2018 provided to us by our instructor. The data was cleaned by reducing it to a collection of JSON files containing lists of structures of the form document text ("text") field and an id ("id") field. In total there are around 133 thousand entries in this dataset.
 
@@ -100,3 +102,7 @@ Postgres exhibits a very fast search performance against our solution. We can ea
 
 # License
 Distributed under the MIT license. See [`LICENSE`](./LICENSE) for more information.
+
+# Demonstration:
+
+https://youtu.be/JMaSnsIuzEY
